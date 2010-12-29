@@ -116,20 +116,10 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 " NERDTree
-" Bundle: git://github.com/scrooloose/nerdtree.git
 nmap <Space>D :NERDTreeFind<cr>
 nmap <Space>d :NERDTreeToggle<cr>
 
-" Bundle: git://github.com/vim-scripts/bufexplorer.zip.git
-" Bundle: git://github.com/bronson/vim-closebuffer.git
-" Bundle: git://github.com/vim-scripts/IndexedSearch.git
-" Bundle: git://github.com/Raimondi/YAIFA.git
-
-" Matchit
-" Bundle: https://github.com/mhz/vim-matchit.git
-
 " Nerd Commenter
-" Bundle: git://github.com/scrooloose/nerdcommenter.git
 " add a space between the comment delimiter and text
 let NERDSpaceDelims=1
 
@@ -143,20 +133,7 @@ vmap <D-/> <ESC>:call NERDComment(1, "toggle")<CR>
 nmap <C-_> :call NERDComment(0, "toggle")<CR>
 vmap <C-_> <ESC>:call NERDComment(1, "toggle")<CR>
 
-" Bundle: git://github.com/tpope/vim-surround.git
-" Bundle: git://github.com/vim-scripts/taglist.vim
-" Bundle: git://github.com/msanders/snipmate.vim.git
-" Bundle: git://github.com/scrooloose/snipmate-snippets.git
-" Bundle: git://github.com/vim-scripts/Align.git
-" Bundle: git://github.com/tpope/vim-repeat.git
-" Bundle: git://github.com/tpope/vim-fugitive.git
-" Bundle: git://github.com/ervandew/supertab.git
-" Bundle: git://github.com/vim-scripts/jQuery.git
-" Bundle: git://github.com/tpope/vim-git.git
-" Bundle: git://github.com/tpope/vim-markdown.git
-
 " Command-T
-" Bundle: git://git.wincent.com/command-t.git
 let g:CommandTMatchWindowAtTop=1 " show window at top
 "}}}
 " Commands {{{1
