@@ -61,3 +61,12 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = https://github.com/mattn/zencoding-vim.git
+[submodule "bundle/tag-list"]
+	path = bundle/tag-list
+	url = https://github.com/jcf/tag_list.vim.git
+[submodule "bundle/auto_close"]
+	path = bundle/auto_close
+	url = https://github.com/Townk/vim-autoclose.git

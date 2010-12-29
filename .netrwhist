@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/rabidPraxis/Dropbox/Settings/vim/.vim/bundle/snipmate-snippets'
+let g:netrw_dirhist_2='/Users/rabidPraxis/Dropbox/rpLib/Work/programmanagement/__wordpress/wp_test'
+let g:netrw_dirhist_3='/Users/rabidPraxis/Dropbox/rpLib/Work/programmanagement/__wordpress/wp_test/wp-content'
+let g:netrw_dirhist_4='/Users/rabidPraxis/Dropbox/rpLib/Work/programmanagement/__wordpress/wp_test/wp-content/themes'
+let g:netrw_dirhist_5='/Users/rabidPraxis/Dropbox/rpLib/Work/programmanagement/__wordpress/wp_test/wp-content/themes/ncm'
+let g:netrw_dirhist_6='/Users/rabidPraxis/Dropbox/rpLib/Work/programmanagement/__wordpress/wp_test/wp-content/themes/ncm/sass'

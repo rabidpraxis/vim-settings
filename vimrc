@@ -1,6 +1,10 @@
 " rabidpraxis vimrc
 
 filetype off
+" Pathogen Setup
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 filetype plugin indent on       " Enable file type detection.
 syntax on                       " Enable Syntax
 
@@ -54,8 +58,8 @@ nnoremap <Space> za<cr>
 vnoremap <Space> za<cr>
 
 " Save folding when leaving file and reload when entering
-au BufWinLeave * mkview
-au BufWinEnter * silent loadview
+au BufWinLeave ?* mkview
+au BufWinEnter ?* silent loadview
 
 au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
@@ -110,10 +114,6 @@ map <leader>w <C-w>v<C-w>l
 
 "}}}
 " Plugins and Settings {{{1
-
-" Pathogen Setup
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
 
 " NERDTree
 nmap <Space>D :NERDTreeFind<cr>
