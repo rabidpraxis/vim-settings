@@ -1,0 +1,7 @@
+*bundles.txt*                    Bundles                      Version 0.1
+
+These are the bundles installed on your system, along with their
+versions and release dates.  Downloaded on Wed Dec 29 12:33:35 -0800 2010.
+
+A version number of 'n/a' means upstream hasn't tagged any releases.
+
