@@ -1,5 +1,7 @@
 " rabidpraxis vimrc
 
+set nocompatible                " No vi compatability
+
 filetype off
 " Pathogen Setup
 call pathogen#runtime_append_all_bundles()
@@ -9,12 +11,11 @@ filetype plugin indent on       " Enable file type detection.
 syntax on                       " Enable Syntax
 
 " Generics {{{1
-set nocompatible                " No vi compatability
 set ttyfast
 set autoindent	        	      " always set autoindenting on
 set backspace=indent,eol,start
 set nowrap
-set ruler
+" set ruler
 
 set history=500
 set ruler			                  " show the cursor position all the time
@@ -24,11 +25,12 @@ set clipboard+=unnamed          " yanks go on clipboard
 set hidden                      " Buffers can go in the background
 
 " Visual
-set relativenumber
+set number
 set cursorline
 set showmatch
 set novisualbell
-set colorcolumn=82
+" set colorcolumn=82
+set guicursor=a:blinkon0
 
 " Tab
 set softtabstop=2
@@ -37,6 +39,7 @@ set tabstop=2
 set expandtab
 set smarttab
 
+set shell=zsh
 "}}}
 " Searching {{{1
 nnoremap / /\v
@@ -94,8 +97,11 @@ inoremap <C-U> <C-G>u<C-U>
 " Replace escape with jj when in insert mode
 imap jj <esc>
 
+" Remap zen coding
+imap <C-z> <C-Y>, 
+
 " Shouldn't need shift
-nnoremap ; :
+" nnoremap ; :
 
 " Remove arrow key functionality
 nnoremap <up> <nop>
@@ -112,26 +118,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>w <C-w>v<C-w>l
 
+" Edit vimrc
+nmap <leader>v :edit $HOME/.vim/vimrc<CR>
+
 "}}}
 " Plugins and Settings {{{1
-
-" NERDTree
-nmap <Space>D :NERDTreeFind<cr>
-nmap <Space>d :NERDTreeToggle<cr>
-
-" Nerd Commenter
-" add a space between the comment delimiter and text
-let NERDSpaceDelims=1
-
-" Control-/
-nmap <C-/> :call NERDComment(0, "toggle")<CR>
-vmap <C-/> <ESC>:call NERDComment(1, "toggle")<CR>
-" Command-/
-nmap <D-/> <ESC>:call NERDComment(1, "toggle")<CR>
-vmap <D-/> <ESC>:call NERDComment(1, "toggle")<CR>
-" Control-_
-nmap <C-_> :call NERDComment(0, "toggle")<CR>
-vmap <C-_> <ESC>:call NERDComment(1, "toggle")<CR>
 
 " Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
@@ -141,6 +132,9 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 if has("autocmd")
   " For all text files set 'textwidth' to 80 characters.
   autocmd FileType text setlocal textwidth=80
+
+  " Refresh browsers
+  au! BufWritePost *.html,*.scss,*.php :silent !python /Users/rabidPraxis/Dropbox/rpLib/Scripts/Textmate\ Bundles/rp-web-tools-tmbundle/bin/refresh_browsers.py  
 
   " Restore cursor positioning
   autocmd BufReadPost *
@@ -159,5 +153,23 @@ if has("autocmd")
 endif
 
 " }}}
+" Functions {{{1
 
-" vim:foldmethod=marker
+" Add RebuildTagsFile function/command
+function! s:RebuildTagsFile()
+  !ctags -R --exclude=coverage --exclude=files --exclude=public --exclude=log --exclude=tmp --exclude=vendor *
+endfunction
+command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
+
+" StatusLine
+set laststatus=2
+set statusline=\ "
+set statusline+=%f\ " file name
+set statusline+=[
+set statusline+=%{strlen(&ft)?&ft:'none'}, " filetype
+set statusline+=%{&fileformat}] " file format
+set statusline+=%h%1*%m%r%w%0* " flag
+set statusline+=%= " right align
+set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
+
+"}}}
