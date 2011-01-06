@@ -100,8 +100,8 @@ imap jj <esc>
 " Remap zen coding
 imap <C-z> <C-Y>, 
 
-" Shouldn't need shift
-" nnoremap ; :
+imap <C-D>c <F5>
+vmap <C-D>c <F5>
 
 " Remove arrow key functionality
 nnoremap <up> <nop>
@@ -126,6 +126,25 @@ nmap <leader>v :edit $HOME/.vim/vimrc<CR>
 
 " Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
+
+" ZenCoding Setup
+let g:user_zen_settings = {
+\  'php' : {
+\    'extends' : 'html',
+\    'filters' : 'c',
+\  },
+\  'xml' : {
+\    'extends' : 'html',
+\  },
+\  'scss' : {
+\    'extends' : 'css',
+\  },
+\}
+
+let g:user_zen_expandabbr_key = '<c-e>'
+let g:user_zen_next_key = '<c-j>'
+let g:user_zen_prev_key = '<c-k>'
+
 "}}}
 " Commands {{{1
 

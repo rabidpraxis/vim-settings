@@ -76,3 +76,6 @@
 [submodule "bundle/php-indent"]
 	path = bundle/php-indent
 	url = https://github.com/vim-scripts/PHP-correct-Indenting.git
+[submodule "bundle/color_picker"]
+	path = bundle/color_picker
+	url = https://github.com/vim-scripts/VIM-Color-Picker.git
