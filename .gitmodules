@@ -1,6 +1,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/scrooloose/nerdtree.git
+	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bufexplorer.zip"]
 	path = bufexplorer.zip
 	url = git://github.com/vim-scripts/bufexplorer.zip.git
@@ -78,4 +78,37 @@
 	url = https://github.com/vim-scripts/PHP-correct-Indenting.git
 [submodule "bundle/color_picker"]
 	path = bundle/color_picker
-	url = https://github.com/vim-scripts/VIM-Color-Picker.git
+	url = https://github.com/vim-scripts/PickAColor.vim.git
+[submodule "bundles/ack"]
+	path = bundles/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/hexHighlight"]
+	path = bundle/hexHighlight
+	url = https://github.com/yurifury/hexHighlight.git
+[submodule "bundle/Tabular"]
+	path = bundle/Tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/cucumber"]
+	path = bundle/cucumber
+	url = https://github.com/tpope/vim-cucumber.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/yui3"]
+	path = bundle/yui3
+	url = https://github.com/rgrove/vim-yui3.git
+[submodule "bundle/slime"]
+	path = bundle/slime
+	url = https://github.com/HelgeG/Slime-for-vim.git
+[submodule "bundle/vividchalk_color"]
+	path = bundle/vividchalk_color
+	url = https://github.com/tpope/vim-vividchalk.git
+[submodule "bundle/LustyJuggler"]
+	path = bundle/LustyJuggler
+	url = https://github.com/vim-scripts/LustyJuggler.git

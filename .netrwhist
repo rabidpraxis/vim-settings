@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/rabidPraxis/Dropbox/Settings/.dotfiles/.vim/bundle/color_picker/plugin'
-let g:netrw_dirhist_2='/Users/rabidPraxis/Dropbox/Settings/.dotfiles/.vim/bundle/color_picker'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/rabidPraxis/Dropbox/rpLib/Study/RSpec_Book/codebreaker/lib/codebreaker'
+let g:netrw_dirhist_2='/Users/rabidPraxis/Dropbox/rpLib/Study/RSpec_Book/codebreaker'
+let g:netrw_dirhist_3='/Users/rabidPraxis/.oh-my-zsh'
+let g:netrw_dirhist_4='/Users/rabidPraxis/Dropbox/rpLib/Todo'
+let g:netrw_dirhist_5='/Users/rabidPraxis/.oh-my-zsh'
+let g:netrw_dirhist_6='/usr/local/Cellar/zsh/4.3.10/share/zsh/functions'
+let g:netrw_dirhist_7='/Users/rabidPraxis/.oh-my-zsh'
+let g:netrw_dirhist_8='/Users/rabidPraxis/Dropbox/Settings/.dotfiles/.vim'

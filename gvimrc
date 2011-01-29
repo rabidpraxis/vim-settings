@@ -1,5 +1,4 @@
 set guifont=Inconsolata:h15
-colorscheme molokai
 set background=dark
 if has("gui_running")
     set guioptions-=T

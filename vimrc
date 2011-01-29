@@ -12,25 +12,35 @@ syntax on                       " Enable Syntax
 
 " Generics {{{1
 set ttyfast
-set autoindent	        	      " always set autoindenting on
+set autoindent                  " always set autoindenting on
 set backspace=indent,eol,start
 set nowrap
-" set ruler
 
 set history=500
-set ruler			                  " show the cursor position all the time
-set showcmd			                " display incomplete commands
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
+
+" set formatprg=par\ -w80         " Use par for text formatting
 
 set clipboard+=unnamed          " yanks go on clipboard
 set hidden                      " Buffers can go in the background
-
-" Visual
+"}}}
+" Visual {{{1
 set number
 set cursorline
 set showmatch
 set novisualbell
 " set colorcolumn=82
 set guicursor=a:blinkon0
+
+set cmdheight=2
+
+set wildmenu                    " make tab completion for files/buffers act like bash
+set wildmode=list:longest          " show a list when pressing tab and complete
+
+" Show hidden
+" set list
+" set listchars=tab:▸\ ,eol:¬
 
 " Tab
 set softtabstop=2
@@ -39,6 +49,7 @@ set tabstop=2
 set expandtab
 set smarttab
 
+colorscheme rp
 set shell=zsh
 "}}}
 " Searching {{{1
@@ -66,23 +77,24 @@ au BufWinEnter ?* silent loadview
 
 au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
-" Customize foldtext
-" function! MyFoldText()
-    " let line = getline(v:foldstart)
+" Customize foldtext {{{2
+function! MyFoldText()
+  let line = getline(v:foldstart)
 
-    " let nucolwidth = &fdc + &number * &numberwidth
-    " let windowwidth = winwidth(0) - nucolwidth - 3
-    " let foldedlinecount = v:foldend - v:foldstart
+  let nucolwidth = &fdc + &number * &numberwidth
+  let windowwidth = winwidth(0) - nucolwidth - 3
+  let foldedlinecount = v:foldend - v:foldstart
 
-    " " expand tabs into spaces
-    " let onetab = strpart('          ', 0, &tabstop)
-    " let line = substitute(line, '\t', onetab, 'g')
+  " expand tabs into spaces
+  let onetab = strpart('          ', 0, &tabstop)
+  let line = substitute(line, '\t', onetab, 'g')
 
-    " let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
-    " let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
-    " return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
-" endfunction
-" set foldtext=MyFoldText()
+  let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
+  let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
+  return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+endfunction
+"}}}
+set foldtext=MyFoldText()
 " }}}
 
 let mapleader = ","
@@ -100,8 +112,13 @@ imap jj <esc>
 " Remap zen coding
 imap <C-z> <C-Y>, 
 
-imap <C-D>c <F5>
-vmap <C-D>c <F5>
+" Replace Things
+noremap ; :
+
+" Insert color mappings
+map <Leader>ch :PickHEX<cr>
+map <Leader>cr :PickRGB<cr>
+map <Leader>cl :PickHSL<cr>
 
 " Remove arrow key functionality
 nnoremap <up> <nop>
@@ -119,12 +136,11 @@ map <C-l> <C-w>l
 map <leader>w <C-w>v<C-w>l
 
 " Edit vimrc
-nmap <leader>v :edit $HOME/.vim/vimrc<CR>
+nmap <leader>ev :e ~/.vim/vimrc<CR>
 
 "}}}
 " Plugins and Settings {{{1
 
-" Command-T
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 " ZenCoding Setup
@@ -145,6 +161,17 @@ let g:user_zen_expandabbr_key = '<c-e>'
 let g:user_zen_next_key = '<c-j>'
 let g:user_zen_prev_key = '<c-k>'
 
+" Ack mapping
+nnoremap <Leader>a :Ack 
+ 
+ 
+" Slime Mapping
+vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
+nmap <C-c><C-c> vip<C-c><C-c>
+
+nmap <C-c>v :call Screen_Vars()<CR>
+
+
 "}}}
 " Commands {{{1
 
@@ -152,8 +179,9 @@ if has("autocmd")
   " For all text files set 'textwidth' to 80 characters.
   autocmd FileType text setlocal textwidth=80
 
+  au FileType markdown setlocal spell textwidth=80 linebreak 
   " Refresh browsers
-  au! BufWritePost *.html,*.scss,*.php :silent !python /Users/rabidPraxis/Dropbox/rpLib/Scripts/Textmate\ Bundles/rp-web-tools-tmbundle/bin/refresh_browsers.py  
+  " au! BufWritePost *.html,*.scss,*.php :silent !python /Users/rabidPraxis/Dropbox/rpLib/Scripts/Textmate\ Bundles/rp-web-tools-tmbundle/bin/refresh_browsers.py  
 
   " Restore cursor positioning
   autocmd BufReadPost *
@@ -162,7 +190,7 @@ if has("autocmd")
     \ endif
 
   " Source the vimrc file after saving it
-  autocmd! bufwritepost vimrc source $MYVIMRC
+  autocmd! bufwritepost vimrc,*.vim source $MYVIMRC
 
   " Buffer diff
   if !exists(":DiffOrig")
@@ -180,6 +208,26 @@ function! s:RebuildTagsFile()
 endfunction
 command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
 
+
+" Highlight hex numbers as colors when this is toggled
+if exists('*HexHighlight()')
+  nmap <leader>h :call HexHighlight()<cr>
+endif
+
+" Textmate equvalent of context viewing
+" adds to statusline
+set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}
+
+" a little more informative version of the above
+nmap <C-S-P> :call <SID>SynStack()<CR>
+
+function! <SID>SynStack()
+    if !exists("*synstack")
+        return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 " StatusLine
 set laststatus=2
 set statusline=\ "
@@ -192,3 +240,5 @@ set statusline+=%= " right align
 set statusline+=%-14.(%l,%c%V%)\ %<%P " offset
 
 "}}}
+
+" vim:ft=vim fdm=marker
