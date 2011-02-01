@@ -121,6 +121,9 @@ map <Leader>ch :PickHEX<cr>
 map <Leader>cr :PickRGB<cr>
 map <Leader>cl :PickHSL<cr>
 
+" NERDTree toggle
+map <Leader>v :NERDTreeToggle<cr>
+
 " Remove arrow key functionality
 nnoremap <up> <nop>
 nnoremap <down> <nop>

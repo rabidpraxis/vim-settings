@@ -1,4 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/Users/rabidpraxis/.pentadactyl/info'
 let g:netrw_dirhist_2='/Users/rabidpraxis/.pentadactyl'
+let g:netrw_dirhist_3='/Users/rabidpraxis/Dropbox/rpLib/Study/Rails_Tutorial/sample_app_revised'
+let g:netrw_dirhist_4='/usr/local/vim/vim/398996'
