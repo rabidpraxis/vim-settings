@@ -118,3 +118,9 @@
 [submodule "vim/bundle/rvm_ruby"]
 	path = vim/bundle/rvm_ruby
 	url = git://github.com/jcf/rvm_ruby.vim.git
+[submodule "bundle/conque"]
+	path = bundle/conque
+	url = https://github.com/rson/vim-conque.git
+[submodule "bundle/UltiSnips"]
+	path = bundle/UltiSnips
+	url = https://github.com/vim-scripts/UltiSnips.git

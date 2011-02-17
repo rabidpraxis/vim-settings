@@ -82,6 +82,7 @@ au BufNewFile,BufRead *.html map <leader>ft Vatzf
 function! MyFoldText()
   let line = getline(v:foldstart)
 
+  let line = substitute(line, '{{{[0-9]', '', 'g')
   let nucolwidth = &fdc + &number * &numberwidth
   let windowwidth = winwidth(0) - nucolwidth - 3
   let foldedlinecount = v:foldend - v:foldstart
@@ -92,7 +93,7 @@ function! MyFoldText()
 
   let line = strpart(line, 0, windowwidth - 2 -len(foldedlinecount))
   let fillcharcount = windowwidth - len(line) - len(foldedlinecount) - 4
-  return line . '…' . repeat(" ",fillcharcount) . foldedlinecount . '…' . ' '
+  return line . '   ' . repeat(" ",fillcharcount) . foldedlinecount . '   ' . ' '
 endfunction
 "}}}
 set foldtext=MyFoldText()
@@ -167,7 +168,9 @@ let g:user_zen_prev_key = '<c-k>'
 
 " Ack mapping
 nnoremap <Leader>a :Ack 
- 
+
+" Ultisnips path addition
+set runtimepath+=~/.vim/bundle/UltiSnips 
  
 " Slime Mapping
 vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>

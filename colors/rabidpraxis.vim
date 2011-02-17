@@ -74,7 +74,7 @@ hi VertSplit        guifg=#202020     guibg=#232939     gui=NONE      ctermfg=da
 hi StatusLine       guifg=#CCCCCC     guibg=#54628d     gui=italic    ctermfg=white       ctermbg=darkgray    cterm=NONE
 hi StatusLineNC     guifg=black       guibg=#39435e     gui=NONE      ctermfg=blue        ctermbg=darkgray    cterm=NONE  
 
-hi Folded           guifg=#484b4f     guibg=#000000     gui=NONE      ctermfg=NONE        ctermbg=NONE        cterm=NONE
+hi Folded           guifg=#484b4f     guibg=#000000     gui=NONE      ctermfg=black        ctermbg=NONE        cterm=NONE
 hi Title            guifg=#f6f3e8     guibg=NONE        gui=bold      ctermfg=NONE        ctermbg=NONE        cterm=NONE
 hi Visual           guifg=NONE        guibg=#374176     gui=NONE      ctermfg=NONE        ctermbg=darkgray    cterm=NONE
 
