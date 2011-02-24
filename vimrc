@@ -163,14 +163,17 @@ let g:user_zen_settings = {
 \}
 
 let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_next_key = '<c-j>'
-let g:user_zen_prev_key = '<c-k>'
+let g:user_zen_next_key = '<c-m>'
+let g:user_zen_prev_key = '<c-n>'
 
 " Ack mapping
 nnoremap <Leader>a :Ack 
-
-" Ultisnips path addition
+" Ultisnips 
 set runtimepath+=~/.vim/bundle/UltiSnips 
+" Remove mapping to c-m before setting trigger
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-g>"
+
  
 " Slime Mapping
 vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
