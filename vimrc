@@ -163,8 +163,8 @@ let g:user_zen_settings = {
 \}
 
 let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_next_key = '<c-m>'
-let g:user_zen_prev_key = '<c-n>'
+" let g:user_zen_next_key = '<c-m>'
+" let g:user_zen_prev_key = '<c-n>'
 
 " Ack mapping
 nnoremap <Leader>a :Ack 

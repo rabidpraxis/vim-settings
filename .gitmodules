@@ -124,3 +124,6 @@
 [submodule "bundle/UltiSnips"]
 	path = bundle/UltiSnips
 	url = https://github.com/vim-scripts/UltiSnips.git
+[submodule "bundle/auto_colse"]
+	path = bundle/auto_colse
+	url = https://github.com/Townk/vim-autoclose.git

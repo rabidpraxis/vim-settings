@@ -1,4 +1,4 @@
-set guifont=Bitstream\ Vera\ Sans\ Mono:h13
+set guifont=Bitstream\ Vera\ Sans\ Mono:h15
 set background=dark
 if has("gui_running")
     set guioptions-=T
