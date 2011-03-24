@@ -127,3 +127,21 @@
 [submodule "bundle/auto_colse"]
 	path = bundle/auto_colse
 	url = https://github.com/Townk/vim-autoclose.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/weierophinney/vimwiki.git
+[submodule "bundle/taglist"]
+	path = bundle/taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/php-doc"]
+	path = bundle/php-doc
+	url = https://github.com/vim-scripts/php-doc.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = https://github.com/tomtom/tlib_vim.git
+[submodule "bundle/ttags"]
+	path = bundle/ttags
+	url = https://github.com/tomtom/ttags_vim.git
+[submodule "bundle/checksyntax"]
+	path = bundle/checksyntax
+	url = https://github.com/tomtom/checksyntax_vim.git

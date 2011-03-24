@@ -73,10 +73,10 @@ nnoremap <Space> za<cr>
 vnoremap <Space> za<cr>
 
 " Save folding when leaving file and reload when entering
-au BufWinLeave ?* mkview
-au BufWinEnter ?* silent loadview
-
-au BufNewFile,BufRead *.html map <leader>ft Vatzf
+" au BufWinLeave ?* mkview
+" au BufWinEnter ?* silent loadview
+" 
+" au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
 " Customize foldtext {{{2
 function! MyFoldText()
@@ -125,6 +125,8 @@ map <Leader>cl :PickHSL<cr>
 " NERDTree toggle
 map <Leader>v :NERDTreeToggle<cr>
 
+"taglist toggle
+
 " Remove arrow key functionality
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -163,24 +165,29 @@ let g:user_zen_settings = {
 \}
 
 let g:user_zen_expandabbr_key = '<c-e>'
-" let g:user_zen_next_key = '<c-m>'
-" let g:user_zen_prev_key = '<c-n>'
+let g:user_zen_next_key = '<leader><tab>'
+let g:user_zen_prev_key = '<c-g>'
 
 " Ack mapping
 nnoremap <Leader>a :Ack 
+
 " Ultisnips 
 set runtimepath+=~/.vim/bundle/UltiSnips 
 " Remove mapping to c-m before setting trigger
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-g>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
- 
-" Slime Mapping
-vmap <C-c><C-c> "ry :call Send_to_Screen(@r)<CR>
-nmap <C-c><C-c> vip<C-c><C-c>
+" Taglist
+let Tlist_Enable_Fold_Column = 0
+let Tlist_Show_One_File = 1
+let Tlist_Compact_Format = 0
+nnoremap <Leader>b :TlistToggle<cr>
 
-nmap <C-c>v :call Screen_Vars()<CR>
-
+" Auto Documentation
+if has("autocmd")
+  au FileType php nnoremap <Leader>d :call PhpDocSingle()<cr>
+endif
 
 "}}}
 " Commands {{{1
@@ -223,6 +230,15 @@ command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
 if exists('*HexHighlight()')
   nmap <leader>h :call HexHighlight()<cr>
 endif
+
+" function! CleverTab()
+"   if strpart( getline('.'), 0, col('.')-1 ) =~ '^\s*$'
+"     return "\<Tab>"
+"   else
+"     return "\<C-N>"
+"   endif
+" endfunction
+" inoremap <Tab> <C-R>=CleverTab()<CR>
 
 " Textmate equvalent of context viewing
 " adds to statusline
