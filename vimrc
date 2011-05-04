@@ -38,6 +38,7 @@ set cmdheight=2
 
 set wildmenu                    " make tab completion for files/buffers act like bash
 set wildmode=list:longest          " show a list when pressing tab and complete
+set wildignore=tmp/**
 
 " Show hidden
 " set list
@@ -72,11 +73,6 @@ set foldlevelstart=100 " Don't allow initial folding
 nnoremap <Space> za<cr>
 vnoremap <Space> za<cr>
 
-" Save folding when leaving file and reload when entering
-" au BufWinLeave ?* mkview
-" au BufWinEnter ?* silent loadview
-" 
-" au BufNewFile,BufRead *.html map <leader>ft Vatzf
 
 " Customize foldtext {{{2
 function! MyFoldText()
@@ -159,8 +155,12 @@ let g:user_zen_settings = {
 \  'xml' : {
 \    'extends' : 'html',
 \  },
-\  'scss' : {
+\  'haml' : {
+\    'filters' : 'haml', 
+\  },
+\  'sass' : {
 \    'extends' : 'css',
+\    'filters' : 'sass',
 \  },
 \}
 
@@ -182,12 +182,16 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let Tlist_Enable_Fold_Column = 0
 let Tlist_Show_One_File = 1
 let Tlist_Compact_Format = 0
-nnoremap <Leader>b :TlistToggle<cr>
+" nnoremap <Leader>b :TlistToggle<cr>
+
+let g:delimitMate_expand_cr = 1
 
 " Auto Documentation
 if has("autocmd")
   au FileType php nnoremap <Leader>d :call PhpDocSingle()<cr>
 endif
+
+
 
 "}}}
 " Commands {{{1
@@ -196,18 +200,31 @@ if has("autocmd")
   " For all text files set 'textwidth' to 80 characters.
   autocmd FileType text setlocal textwidth=80
 
+  " Save folding when leaving file and reload when entering
+  " au BufWinLeave ?* mkview
+  " au BufWinEnter ?* silent loadview
+  " au BufNewFile,BufRead *.html map <leader>ft Vatzf
+
+  "ruby
+  au FileType ruby,eruby set omnifunc=rubycomplete#Complete
+  au FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+  au FileType ruby,eruby let g:rubycomplete_rails = 1
+  au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+
   au FileType markdown setlocal spell textwidth=80 linebreak 
   " Refresh browsers
   " au! BufWritePost *.html,*.scss,*.php :silent !python /Users/rabidPraxis/Dropbox/rpLib/Scripts/Textmate\ Bundles/rp-web-tools-tmbundle/bin/refresh_browsers.py  
 
   " Restore cursor positioning
-  autocmd BufReadPost *
+  au BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
 
   " Source the vimrc file after saving it
-  autocmd! bufwritepost vimrc,*.vim source $MYVIMRC
+  au! bufwritepost vimrc,*.vim source $MYVIMRC
+
+  au bufwritepost *.snippets UltiSnipsReset
 
   " Buffer diff
   if !exists(":DiffOrig")

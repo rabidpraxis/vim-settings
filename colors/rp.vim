@@ -7,6 +7,8 @@
 set background=dark
 highlight clear
 
+highlight Pmenu ctermbg=238 gui=bold
+
 if exists("syntax_on")
   syntax reset
 endif
@@ -62,9 +64,10 @@ hi helpStar     guifg=#afe599
 " Ruby Specific
 hi rubyClass                    guifg=#e29a63 ctermfg=173 guibg=NONE gui=NONE
 hi rubyFunction                 guifg=#89bdff ctermfg=111 guibg=NONE gui=NONE
+hi rubyLocalVariableOrMethod    guifg=#89bdff ctermfg=111 guibg=NONE gui=NONE
 hi rubyInterpolationDelimiter   guifg=NONE    guibg=NONE  gui=NONE
 hi rubySymbol                   guifg=#3387cc ctermfg=68  guibg=NONE gui=NONE
-hi rubyConstant                 guifg=#9b859d ctermfg=246 guibg=NONE gui=underline 
+hi rubyConstant                 guifg=#9b859d ctermfg=246 guibg=NONE gui=underline cterm=underline
 hi rubyStringDelimiter          guifg=#65b042 ctermfg=71  guibg=NONE gui=NONE
 hi rubyBlockParameter           guifg=#3e87e3 ctermfg=68  guibg=NONE gui=NONE
 hi rubyInstanceVariable         guifg=#3e87e3 ctermfg=68  guibg=NONE gui=NONE
@@ -101,17 +104,20 @@ hi javaScriptBraces        guifg=NONE    guibg=NONE  gui=NONE
 hi javaScriptLabel  guifg=#78adeb
 
 " YAML Specific
-hi yamlKey  guifg=#89bdff ctermfg=111 guibg=NONE gui=NONE
-hi yamlAnchor  guifg=#3e87e3 ctermfg=68 guibg=NONE gui=NONE
-hi yamlAlias  guifg=#3e87e3 ctermfg=68 guibg=NONE gui=NONE
-hi yamlDocumentHeader  guifg=#65b042 ctermfg=71 guibg=NONE gui=NONE
+hi yamlKey               guifg=#89bdff  ctermfg=111  guibg=NONE  gui=NONE
+hi yamlAnchor            guifg=#3e87e3  ctermfg=68   guibg=NONE  gui=NONE
+hi yamlAlias             guifg=#3e87e3  ctermfg=68   guibg=NONE  gui=NONE
+hi yamlDocumentHeader    guifg=#65b042  ctermfg=71   guibg=NONE  gui=NONE
 
 " CSS Specific
-hi cssURL  guifg=#3e87e3 ctermfg=68 guibg=NONE gui=NONE
-hi cssFunctionName  guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE
-hi cssColor  guifg=#3387cc ctermfg=68 guibg=NONE gui=NONE
-hi cssPseudoClassId  guifg=#89bdff ctermfg=111 guibg=NONE gui=NONE
-hi cssClassName  guifg=#89bdff ctermfg=111 guibg=NONE gui=NONE
-hi cssValueLength  guifg=#3387cc ctermfg=68 guibg=NONE gui=NONE
-hi cssCommonAttr  guifg=#cf6a4c ctermfg=167 guibg=NONE gui=NONE
-hi cssBraces  guifg=NONE guibg=NONE gui=NONE
+hi cssURL                guifg=#3e87e3   ctermfg=68    guibg=NONE   gui=NONE
+hi cssFunctionName       guifg=#dad085   ctermfg=186   guibg=NONE   gui=NONE
+hi cssColor              guifg=#3387cc   ctermfg=68    guibg=NONE   gui=NONE
+hi cssPseudoClassId      guifg=#89bdff   ctermfg=111   guibg=NONE   gui=NONE
+hi cssClassName          guifg=#89bdff   ctermfg=111   guibg=NONE   gui=NONE
+hi cssValueLength        guifg=#3387cc   ctermfg=68    guibg=NONE   gui=NONE
+hi cssCommonAttr         guifg=#cf6a4c   ctermfg=167   guibg=NONE   gui=NONE
+hi cssBraces             guifg=NONE      guibg=NONE    gui=NONE
+
+" Taglist
+hi TagListTitle   ctermfg=111
