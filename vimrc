@@ -144,6 +144,10 @@ nmap <leader>ev :e ~/.vim/vimrc<CR>
 
 "}}}
 " Plugins and Settings {{{1
+let g:pairtools_javascript_pairclamp = 1
+
+let g:pairtools_python_autoclose  = 1
+let g:pairtools_python_closepairs = '{:},(:),[:],":"'
 
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
