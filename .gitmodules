@@ -60,7 +60,7 @@
 	url = http://github.com/tpope/vim-markdown.git
 [submodule "bundle/command-t"]
 	path = bundle/command-t
-	url = http://github.com/wincent/Command-T.git
+	url = http://github.com/rabidpraxis/Command-T.git
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = http://github.com/mattn/zencoding-vim.git
