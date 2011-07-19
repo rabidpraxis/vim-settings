@@ -63,7 +63,7 @@
 	url = http://github.com/rabidpraxis/Command-T.git
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
-	url = http://github.com/mattn/zencoding-vim.git
+	url = http://github.com/rabidpraxis/zencoding-vim.git
 [submodule "bundle/tag-list"]
 	path = bundle/tag-list
 	url = http://github.com/jcf/tag_list.vim.git
