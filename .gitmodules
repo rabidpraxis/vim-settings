@@ -22,9 +22,6 @@
 [submodule "bundle/vim-matchit"]
 	path = bundle/vim-matchit
 	url = http://github.com/mhz/vim-matchit.git
-[submodule "bundle/nerdcommenter"]
-	path = bundle/nerdcommenter
-	url = http://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
@@ -178,3 +175,6 @@
 [submodule "bundle/coffescript"]
 	path = bundle/coffescript
 	url = http://github.com/kchmck/vim-coffee-script.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = http://github.com/majutsushi/tagbar.git
