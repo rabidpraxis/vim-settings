@@ -1,12 +1,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
-[submodule "bufexplorer.zip"]
-	path = bufexplorer.zip
-	url = http://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "bundle/buffer_explorer"]
-	path = bundle/buffer_explorer
-	url = http://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "bundle/bufexplorer.zip"]
 	path = bundle/bufexplorer.zip
 	url = http://github.com/vim-scripts/bufexplorer.zip.git
@@ -25,18 +19,6 @@
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
-[submodule "bundle/taglist.vim"]
-	path = bundle/taglist.vim
-	url = http://github.com/vim-scripts/taglist.vim
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = http://github.com/msanders/snipmate.vim.git
-[submodule "bundle/snipmate-snippets"]
-	path = bundle/snipmate-snippets
-	url = http://github.com/scrooloose/snipmate-snippets.git
-[submodule "bundle/Align"]
-	path = bundle/Align
-	url = http://github.com/vim-scripts/Align.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = http://github.com/tpope/vim-repeat.git
@@ -61,12 +43,6 @@
 [submodule "bundle/zencoding-vim"]
 	path = bundle/zencoding-vim
 	url = http://github.com/rabidpraxis/zencoding-vim.git
-[submodule "bundle/tag-list"]
-	path = bundle/tag-list
-	url = http://github.com/jcf/tag_list.vim.git
-[submodule "bundle/auto_close"]
-	path = bundle/auto_close
-	url = http://github.com/Townk/vim-autoclose.git
 [submodule "bundle/tComment"]
 	path = bundle/tComment
 	url = http://github.com/tomtom/tcomment_vim.git
@@ -76,9 +52,6 @@
 [submodule "bundle/color_picker"]
 	path = bundle/color_picker
 	url = http://github.com/vim-scripts/PickAColor.vim.git
-[submodule "bundles/ack"]
-	path = bundles/ack
-	url = http://github.com/mileszs/ack.vim.git
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = http://github.com/mileszs/ack.vim.git
@@ -97,48 +70,12 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = http://github.com/scrooloose/syntastic.git
-[submodule "bundle/yui3"]
-	path = bundle/yui3
-	url = http://github.com/rgrove/vim-yui3.git
-[submodule "bundle/slime"]
-	path = bundle/slime
-	url = http://github.com/HelgeG/Slime-for-vim.git
-[submodule "bundle/vividchalk_color"]
-	path = bundle/vividchalk_color
-	url = http://github.com/tpope/vim-vividchalk.git
-[submodule "bundle/LustyJuggler"]
-	path = bundle/LustyJuggler
-	url = http://github.com/vim-scripts/LustyJuggler.git
-[submodule "bundle/rvm"]
-	path = bundle/rvm
-	url = http://github.com/csexton/rvm.vim.git
-[submodule "bundle/conque"]
-	path = bundle/conque
-	url = http://github.com/rson/vim-conque.git
 [submodule "bundle/UltiSnips"]
 	path = bundle/UltiSnips
 	url = http://github.com/vim-scripts/UltiSnips.git
-[submodule "bundle/auto_colse"]
-	path = bundle/auto_colse
-	url = http://github.com/Townk/vim-autoclose.git
-[submodule "bundle/vimwiki"]
-	path = bundle/vimwiki
-	url = http://github.com/weierophinney/vimwiki.git
-[submodule "bundle/taglist"]
-	path = bundle/taglist
-	url = http://github.com/vim-scripts/taglist.vim.git
-[submodule "bundle/php-doc"]
-	path = bundle/php-doc
-	url = http://github.com/vim-scripts/php-doc.git
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = http://github.com/tomtom/tlib_vim.git
-[submodule "bundle/ttags"]
-	path = bundle/ttags
-	url = http://github.com/tomtom/ttags_vim.git
-[submodule "bundle/checksyntax"]
-	path = bundle/checksyntax
-	url = http://github.com/tomtom/checksyntax_vim.git
 [submodule "bundle/haml"]
 	path = bundle/haml
 	url = http://github.com/tpope/vim-haml.git
@@ -151,21 +88,6 @@
 [submodule "bundle/rvm_ruby"]
 	path = bundle/rvm_ruby
 	url = http://github.com/jcf/rvm_ruby.vim.git
-[submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
-	url = http://github.com/vim-ruby/vim-ruby.git
-[submodule "bundle/delimit_mate"]
-	path = bundle/delimit_mate
-	url = http://github.com/Raimondi/delimitMate.git
-[submodule "bundle/mrT"]
-	path = bundle/mrT
-	url = http://github.com/vic/mrT.git
-[submodule "bundle/fuzzyfinder"]
-	path = bundle/fuzzyfinder
-	url = http://github.com/vim-scripts/FuzzyFinder.git
-[submodule "bundle/l9-library"]
-	path = bundle/l9-library
-	url = http://github.com/vim-scripts/L9.git
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
 	url = http://github.com/pangloss/vim-javascript.git
