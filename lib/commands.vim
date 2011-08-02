@@ -17,8 +17,13 @@ if has("autocmd")
 
   " Source the vimrc file after saving it
   au! bufwritepost vimrc,$HOME/.vim/lib/*.vim source $MYVIMRC
-
+  
+  " Reload them snippets
   au! bufwritepost *.snippets UltiSnipsReset
+  
+  " Save folding, cursor, and options
+  au BufWinLeave ?* mkview
+  au BufWinEnter ?* silent loadview
 
   " Buffer diff
   if !exists(":DiffOrig")
