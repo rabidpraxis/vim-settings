@@ -15,12 +15,6 @@ if has("autocmd")
   " Markdown
   au FileType markdown setlocal spell textwidth=80 linebreak 
 
-  " Restore cursor positioning
-  au BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
-
   " Source the vimrc file after saving it
   au! bufwritepost vimrc,$HOME/.vim/lib/*.vim source $MYVIMRC
 

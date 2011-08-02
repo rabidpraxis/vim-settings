@@ -7,8 +7,10 @@ set guicursor=a:blinkon0
 
 set cmdheight=2
 
-set wildmenu                    " make tab completion for files/buffers act like bash
-set wildmode=list:longest          " show a list when pressing tab and complete
+" make tab completion for files/buffers act like bash
+set wildmenu              
+" show a list when pressing tab and complete
+set wildmode=list:longest 
 set wildignore=tmp/**
 
 " Show hidden
