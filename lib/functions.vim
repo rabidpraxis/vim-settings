@@ -7,3 +7,9 @@ function! <SID>SynStack()
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Add RebuildTagsFile function/command
+function! s:RebuildTagsFile()
+  !ctags -R --exclude=coverage --exclude=files --exclude=public --exclude=log --exclude=tmp --exclude=vendor *
+endfunction
+command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()

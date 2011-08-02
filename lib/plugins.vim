@@ -52,21 +52,14 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " My custom ultisnips bundle area (outside of the root)
 let g:UltiSnipsSnippetsDir="~/.vim/bundle/rabidpraxis/UltiSnips"
 
-" Highlight hex numbers as colors when this is toggled
-if exists('*HexHighlight()')
-  nmap <leader>h :call HexHighlight()<cr>
-endif
-
-" Add RebuildTagsFile function/command
-function! s:RebuildTagsFile()
-  !ctags -R --exclude=coverage --exclude=files --exclude=public --exclude=log --exclude=tmp --exclude=vendor *
-endfunction
-command! -nargs=0 RebuildTagsFile call s:RebuildTagsFile()
-
-" Insert color mappings
+"
+" PickHex
+"
 map <Leader>ch :PickHEX<cr>
 map <Leader>cr :PickRGB<cr>
 map <Leader>cl :PickHSL<cr>
 
-" NERDTree toggle
+"
+" NERDTree
+"
 map <Leader>v :NERDTreeToggle<cr>
