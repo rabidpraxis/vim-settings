@@ -1,8 +1,8 @@
 let mapleader = ","
 
+" Format paragraph remapping
 map Q gq
 
-map ,x :CommandTTag<cr>
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -13,18 +13,8 @@ imap jj <esc>
 " Remap zen coding
 imap <C-z> <C-Y>, 
 
-" Replace Things
+" Don't require shift for entering commands
 noremap ; :
-
-" Insert color mappings
-map <Leader>ch :PickHEX<cr>
-map <Leader>cr :PickRGB<cr>
-map <Leader>cl :PickHSL<cr>
-
-" NERDTree toggle
-map <Leader>v :NERDTreeToggle<cr>
-
-"taglist toggle
 
 " Remove arrow key functionality
 nnoremap <up> <nop>
