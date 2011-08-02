@@ -100,3 +100,12 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar.git
+[submodule "bundle/universal_linking"]
+	path = bundle/universal_linking
+	url = https://github.com/vim-scripts/utl.vim.git
+[submodule "bundle/narrow_region"]
+	path = bundle/narrow_region
+	url = https://github.com/chrisbra/NrrwRgn.git
+[submodule "bundle/orgmode"]
+	path = bundle/orgmode
+	url = https://github.com/jceb/vim-orgmode.git
