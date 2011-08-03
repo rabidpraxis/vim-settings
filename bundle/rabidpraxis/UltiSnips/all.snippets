@@ -7,10 +7,23 @@ def cs(snip):
     return c
 endglobal
 
+
+snippet ibb "Full Banner" b
+`!p
+ind = int(vim.eval('indent(".")'))
+spacer = '-' if ind >= 2 else '='
+c = cs(snip)
+# Top area
+snip.rv = c + spacer * (78 - ind)
+snip += c + ' '`${1:content}`!p
+snip += c + spacer * (78 - ind)
+`
+endsnippet
+
 snippet bb "rpBanner" b
 `!p
 ind = int(vim.eval('indent(".")'))
-spacer = '-' if ind > 2 else '='
+spacer = '-' if ind >= 2 else '='
 c = cs(snip)
 snip.rv = c + spacer * 3 + '  '
 `${1:content}`!p
