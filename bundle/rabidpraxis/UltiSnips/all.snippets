@@ -5,19 +5,24 @@ def cs(snip):
     if len(cs) == 3:
         c = cs[0]
     return c
+def spaces(str):
+    import re
+    st = re.split('^(\s*)', str)
+    if len(st)>1:
+        return len(st[1]) 
+    else:
+        return 0
+
 endglobal
 
 snippet ban "Crazy good banner" b
-`!p
-c = cs(snip)
-bar = 75*c 
+`!p c = cs(snip)`
 
-snip.rv = bar
-snip += c + " " + (71-len(t[1]))/2*' '
-`${1:content}`!p
-
-a = 71-len(t[1])
-snip.rv = (a/2 + a%2) * " " + " " + c 
-snip += bar`
+${1:content}
+`!p 
+a = dir(vim)
+for element in a:
+    snip.rv += str(element) +",",
+`
 $0
 endsnippet
