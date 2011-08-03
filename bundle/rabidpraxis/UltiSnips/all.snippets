@@ -21,9 +21,9 @@ ind = int(vim.eval('indent(".")'))
 spacer = '-' if ind >= 2 else '='
 c = cs(snip)
 # Top area
-snip.rv = c + spacer * (78 - ind)
+snip.rv = c + spacer * (74 - ind)
 snip += c + ' '`${1:content}`!p
-snip += c + spacer * (78 - ind)
+snip += c + spacer * (74 - ind)
 `
 $0
 endsnippet
