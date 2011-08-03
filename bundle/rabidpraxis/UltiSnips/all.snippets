@@ -7,17 +7,13 @@ def cs(snip):
     return c
 endglobal
 
-snippet ban "Crazy good banner" b
+snippet bb "rpBanner" b
 `!p
+ind = int(vim.eval('indent(".")'))
+spacer = '-' if ind > 2 else '='
 c = cs(snip)
-bar = 75*c 
-
-snip.rv = bar
-snip += c + " " + (71-len(t[1]))/2*' '
+snip.rv = c + spacer * 3 + '  '
 `${1:content}`!p
-
-a = 71-len(t[1])
-snip.rv = (a/2 + a%2) * " " + " " + c 
-snip += bar`
-$0
+snip.rv += '  ' + spacer * (67 - len(t[1]) - ind)
+`
 endsnippet
