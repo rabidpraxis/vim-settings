@@ -15,14 +15,27 @@ def spaces(str):
 
 endglobal
 
-snippet ban "Crazy good banner" b
-`!p c = cs(snip)`
+snippet ibb "Full Banner" b
+`!p
+ind = int(vim.eval('indent(".")'))
+spacer = '-' if ind >= 2 else '='
+c = cs(snip)
+# Top area
+snip.rv = c + spacer * (78 - ind)
+snip += c + ' '`${1:content}`!p
+snip += c + spacer * (78 - ind)
+`
+$0
+endsnippet
 
-${1:content}
-`!p 
-a = dir(vim)
-for element in a:
-    snip.rv += str(element) +",",
+snippet bb "rpBanner" b
+`!p
+ind = int(vim.eval('indent(".")'))
+spacer = '-' if ind >= 2 else '='
+c = cs(snip)
+snip.rv = c + spacer * 3 + '  '
+`${1:content}`!p
+snip.rv += '  ' + spacer * (67 - len(t[1]) - ind)
 `
 $0
 endsnippet
