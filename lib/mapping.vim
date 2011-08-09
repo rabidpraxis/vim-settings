@@ -1,3 +1,4 @@
+" This is vim's default, but lets be explicit anyways
 let mapleader = ","
 
 " Format paragraph remapping
@@ -31,5 +32,4 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 map <leader>w <C-w>v<C-w>l
 
-" Edit vimrc
 nmap <leader>ev :e ~/.vim/vimrc<CR>

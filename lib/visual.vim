@@ -2,7 +2,6 @@ set number
 set cursorline
 set showmatch
 set novisualbell
-" set colorcolumn=82
 set guicursor=a:blinkon0
 
 set cmdheight=2

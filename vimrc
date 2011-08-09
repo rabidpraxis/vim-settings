@@ -1,5 +1,6 @@
+"==============================================================================
 " rabidpraxis vimrc
-
+"==============================================================================
 set nocompatible                " No vi compatability
 
 filetype off
@@ -10,8 +11,9 @@ call pathogen#helptags()
 filetype plugin indent on       " Enable file type detection.
 syntax on                       " Enable Syntax
 
-" Source the settings files
+"===  Source Lib Files  =======================================================
 for scr in split(glob('~/.vim/lib/**'), '')
   exec "source " . scr
 endfor
+
 " vim:ft=vim fdm=marker
