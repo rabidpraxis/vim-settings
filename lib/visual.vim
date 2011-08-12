@@ -1,27 +1,23 @@
-set number
-set cursorline
-set showmatch
-set novisualbell
-set guicursor=a:blinkon0
+set number               " Show line numbers
+set cursorline           " Always show cursor line
+set novisualbell         " I don't mind beeping
+set guicursor=a:blinkon0 " cursor setting
 
-set cmdheight=2
+set cmdheight=2          " Two spaces for feedback down below
 
-" make tab completion for files/buffers act like bash
-set wildmenu              
-" show a list when pressing tab and complete
-set wildmode=list:longest 
-set wildignore=tmp/**
+set wildmenu              " make tab completion for files/buffers act like bash
+set wildmode=list:longest " show a list when pressing tab and complete
+set wildignore=tmp/**     " patterns to ignore during file/directory completion
 
-" Show hidden
-" set list
-" set listchars=tab:▸\ ,eol:¬
+"===  Tab  ====================================================================
+let s:tab_num = 2          " How many spaces will tab be worth?
+let &softtabstop=s:tab_num
+let &shiftwidth=s:tab_num
+let &tabstop=s:tab_num
+set expandtab              " use spaces
+set smarttab               " figure correct spaces to inject per tab
 
-" Tab
-set softtabstop=2
-set shiftwidth=2
-set tabstop=2
-set expandtab
-set smarttab
-
+"===  Custom colorscheme  =====================================================
 colorscheme rp
+"===  zsh ftw  ================================================================
 set shell=zsh

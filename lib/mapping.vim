@@ -11,9 +11,6 @@ inoremap <C-U> <C-G>u<C-U>
 " Replace escape with jj when in insert mode
 imap jj <esc>
 
-" Remap zen coding
-imap <C-z> <C-Y>, 
-
 " Don't require shift for entering commands
 noremap ; :
 
@@ -23,13 +20,17 @@ nnoremap <down> <nop>
 nnoremap <left> <nop>
 nnoremap <right> <nop>
 
+" Move based on visual lines and not wrapped content
 nnoremap j gj
 nnoremap k gk
 
+" Caps lock hjkl is great for window traversing
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+" Convenient window maker
 map <leader>w <C-w>v<C-w>l
 
+" Open vimrc for quick editing
 nmap <leader>ev :e ~/.vim/vimrc<CR>

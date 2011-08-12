@@ -1,4 +1,4 @@
-" Determine syntac of current cursor position
+"===  Determine syntax of current cursor position  ============================
 nmap <C-S-P> :call <SID>SynStack()<CR>
 
 function! <SID>SynStack()
@@ -8,7 +8,7 @@ function! <SID>SynStack()
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-" Add RebuildTagsFile function/command
+"===  Rebuild tags file  ======================================================
 function! s:RebuildTagsFile()
   !ctags -R --exclude=coverage --exclude=files --exclude=public --exclude=log --exclude=tmp --exclude=vendor *
 endfunction

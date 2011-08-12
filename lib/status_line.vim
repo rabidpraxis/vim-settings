@@ -1,6 +1,7 @@
 " Add this to status line when you want to do some syntax debugging
 set statusline+=%{synIDattr(synID(line('.'),col('.'),1),'name')}
 
+"===  Custom Statusline  ======================================================
 set laststatus=2
 set statusline=\                           " just a space
 set statusline+=%f\                        " file name

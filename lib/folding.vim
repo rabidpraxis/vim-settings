@@ -23,9 +23,3 @@ function! MyFoldText()
 endfunction
     
 set foldtext=MyFoldText()
-
-" Save folding when leaving file and reload when entering
-if has("autocmd")
-  au BufWinLeave ?* mkview
-  au BufWinEnter ?* silent loadview
-endif

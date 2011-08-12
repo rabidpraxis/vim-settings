@@ -35,10 +35,13 @@ let g:user_zen_expandabbr_key = '<c-e>'
 let g:user_zen_next_key = '<leader><tab>'
 let g:user_zen_prev_key = '<c-g>'
 
+" Remap zen coding
+imap <C-z> <C-Y>, 
+
 "==============================================================================
 " Ack
 "==============================================================================
-nnoremap <Leader>a :Ack 
+nnoremap <Leader>a :Ack -a
 
 "==============================================================================
 " UltiSnips
