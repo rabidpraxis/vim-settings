@@ -4,9 +4,6 @@
 [submodule "bundle/bufexplorer.zip"]
 	path = bundle/bufexplorer.zip
 	url = http://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "bundle/vim-closebuffer"]
-	path = bundle/vim-closebuffer
-	url = http://github.com/bronson/vim-closebuffer.git
 [submodule "bundle/IndexedSearch"]
 	path = bundle/IndexedSearch
 	url = http://github.com/vim-scripts/IndexedSearch.git
