@@ -1,9 +1,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = http://github.com/scrooloose/nerdtree.git
-[submodule "bundle/bufexplorer.zip"]
-	path = bundle/bufexplorer.zip
-	url = http://github.com/vim-scripts/bufexplorer.zip.git
 [submodule "bundle/IndexedSearch"]
 	path = bundle/IndexedSearch
 	url = http://github.com/vim-scripts/IndexedSearch.git
@@ -67,9 +64,6 @@
 [submodule "bundle/UltiSnips"]
 	path = bundle/UltiSnips
 	url = http://github.com/vim-scripts/UltiSnips.git
-[submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = http://github.com/tomtom/tlib_vim.git
 [submodule "bundle/haml"]
 	path = bundle/haml
 	url = http://github.com/tpope/vim-haml.git
@@ -97,15 +91,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = http://github.com/majutsushi/tagbar.git
-[submodule "bundle/universal_linking"]
-	path = bundle/universal_linking
-	url = https://github.com/vim-scripts/utl.vim.git
-[submodule "bundle/narrow_region"]
-	path = bundle/narrow_region
-	url = https://github.com/chrisbra/NrrwRgn.git
-[submodule "bundle/orgmode"]
-	path = bundle/orgmode
-	url = https://github.com/jceb/vim-orgmode.git
 [submodule "bundle/speed_dating"]
 	path = bundle/speed_dating
 	url = https://github.com/tpope/vim-speeddating.git
