@@ -7,9 +7,6 @@
 [submodule "bundle/YAIFA"]
 	path = bundle/YAIFA
 	url = http://github.com/Raimondi/YAIFA.git
-[submodule "bundle/vim-matchit"]
-	path = bundle/vim-matchit
-	url = http://github.com/mhz/vim-matchit.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = http://github.com/tpope/vim-surround.git
@@ -88,3 +85,6 @@
 [submodule "bundle/speed_dating"]
 	path = bundle/speed_dating
 	url = https://github.com/tpope/vim-speeddating.git
+[submodule "bundle/vim-matchit"]
+	path = bundle/vim-matchit
+	url = http://github.com/vim-scripts/matchit.zip.git
