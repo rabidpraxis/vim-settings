@@ -19,5 +19,6 @@ set smarttab               " figure correct spaces to inject per tab
 
 "===  Custom colorscheme  =====================================================
 colorscheme rp
+set t_Co=256
 "===  zsh ftw  ================================================================
 set shell=zsh
