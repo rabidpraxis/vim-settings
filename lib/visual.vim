@@ -9,6 +9,8 @@ set wildmenu              " make tab completion for files/buffers act like bash
 set wildmode=list:longest " show a list when pressing tab and complete
 set wildignore=tmp/**     " patterns to ignore during file/directory completion
 
+set winwidth=80           " Ensure that the splits are always at least 80 wide
+
 "===  Tab  ====================================================================
 let s:tab_num = 2          " How many spaces will tab be worth?
 let &softtabstop=s:tab_num
