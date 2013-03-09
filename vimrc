@@ -16,4 +16,6 @@ for scr in split(glob('~/.vim/lib/**'), '')
   exec "source " . scr
 endfor
 
+source ~/.vim/bundles.conf
+
 " vim:ft=vim fdm=marker
