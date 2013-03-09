@@ -3,3 +3,5 @@ view/
 .netrwhist
 spell/
 
+bundle/
+!bundle/rabidpraxis
