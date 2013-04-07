@@ -25,6 +25,9 @@ Bundle 'https://github.com/scrooloose/syntastic.git'
 "===  Ragtag  =================================================================
 Bundle 'https://github.com/tpope/vim-ragtag.git'
 
+"===  VimClojure  =============================================================
+Bundle 'VimClojure'
+
 "===  UltiSnips  ==============================================================
 Bundle 'https://github.com/SirVer/ultisnips.git'
 set runtimepath+=~/.vim/bundle/UltiSnips 
