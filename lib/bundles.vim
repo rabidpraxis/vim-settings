@@ -30,6 +30,7 @@ Bundle 'VimClojure'
 
 "===  UltiSnips  ==============================================================
 Bundle 'https://github.com/SirVer/ultisnips.git'
+Bundle "https://github.com/kchmck/vim-coffee-script.git"
 set runtimepath+=~/.vim/bundle/UltiSnips 
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
