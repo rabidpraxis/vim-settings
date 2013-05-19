@@ -12,6 +12,11 @@ Bundle 'https://github.com/tpope/vim-rails.git'
 
 "===  Fugitive  ===============================================================
 Bundle 'https://github.com/tpope/vim-fugitive.git'
+" Every time you open a git object using fugitive it creates a new buffer.
+" This means that your buffer listing can quickly become swamped with
+" fugitive buffers. This prevents this from becomming an issue:
+
+autocmd BufReadPost fugitive://* set bufhidden=delete
 
 "===  Surround  ===============================================================
 Bundle 'https://github.com/tpope/vim-surround.git'
@@ -25,13 +30,19 @@ Bundle 'https://github.com/scrooloose/syntastic.git'
 "===  Ragtag  =================================================================
 Bundle 'https://github.com/tpope/vim-ragtag.git'
 
-"===  VimClojure  =============================================================
-Bundle 'VimClojure'
+"===  Clojure  ================================================================
+Bundle 'https://github.com/tpope/vim-fireplace.git'
+Bundle 'https://github.com/tpope/vim-classpath.git'
+Bundle 'https://github.com/guns/vim-clojure-static'
+Bundle 'https://github.com/kien/rainbow_parentheses.vim'
+Bundle 'https://github.com/vim-scripts/paredit.vim.git'
+" This feature gets old, DISABLED!
+let g:paredit_electric_return=0
 
 "===  UltiSnips  ==============================================================
 Bundle 'https://github.com/SirVer/ultisnips.git'
 Bundle "https://github.com/kchmck/vim-coffee-script.git"
-set runtimepath+=~/.vim/bundle/UltiSnips 
+set runtimepath+=~/.vim/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
@@ -59,7 +70,7 @@ let g:user_zen_settings = {
 \    'extends' : 'html',
 \  },
 \  'haml' : {
-\    'filters' : 'haml', 
+\    'filters' : 'haml',
 \  },
 \  'sass' : {
 \    'filters' : 'fc',
@@ -71,11 +82,11 @@ let g:user_zen_next_key = '<leader><tab>'
 let g:user_zen_prev_key = '<c-g>'
 
 " Remap zen coding
-imap <C-z> <C-Y>, 
+imap <C-z> <C-Y>,
 
 "===  Ack  ====================================================================
 Bundle 'https://github.com/mileszs/ack.vim.git'
-nnoremap ,a :Ack -a 
+nnoremap ,a :Ack -a
 
 "===  Color Picker  ===========================================================
 Bundle 'PickAColor.vim'
@@ -83,3 +94,10 @@ map ,ch :PickHEX<cr>
 map ,cr :PickRGB<cr>
 map ,cl :PickHSL<cr>
 
+"===  PowerLine  ==============================================================
+Bundle "skwp/vim-powerline.git"
+let g:Powerline_symbols='fancy'
+let g:Powerline_theme='skwp'
+let g:Powerline_colorscheme='skwp'
+
+set laststatus=2 "always show the statusline

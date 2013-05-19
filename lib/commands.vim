@@ -12,15 +12,21 @@ if has("autocmd")
   au FileType ruby,eruby let g:rubycomplete_rails = 1
   au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 
+  "---  Clojure  --------------------------------------------------------------
+  au FileType clojure RainbowParenthesesActivate
+  au Syntax clojure RainbowParenthesesLoadRound
+  au Syntax clojure RainbowParenthesesLoadSquare
+  au Syntax clojure RainbowParenthesesLoadBraces
+
   "---  Markdown  -------------------------------------------------------------
-  au FileType markdown setlocal spell textwidth=80 linebreak 
+  au FileType markdown setlocal spell textwidth=80 linebreak
 
   " Source the vimrc file after saving it
   au! bufwritepost vimrc,$HOME/.vim/lib/*.vim source $MYVIMRC
-  
+
   "---  Reload UltiSnips  -----------------------------------------------------
   au! bufwritepost *.snippets UltiSnipsReset
-  
+
   "---  Save Folding, Window, and Cursor upon exit  ---------------------------
   au BufWinLeave ?* mkview
   au BufWinEnter ?* silent loadview
