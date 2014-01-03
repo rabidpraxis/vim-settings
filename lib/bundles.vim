@@ -58,6 +58,7 @@ let g:CommandTMatchWindowAtTop=1 " show window at top
 "===  NERDTree  ===============================================================
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 map ,v :NERDTreeToggle<cr>
+let NERDTreeShowHidden=1
 
 "===  ZenCoding  ==============================================================
 Bundle 'https://github.com/mattn/zencoding-vim.git'
@@ -86,7 +87,7 @@ imap <C-z> <C-Y>,
 
 "===  Ack  ====================================================================
 Bundle 'https://github.com/mileszs/ack.vim.git'
-nnoremap ,a :Ack -a
+nnoremap ,a :Ack
 
 "===  Color Picker  ===========================================================
 Bundle 'PickAColor.vim'
@@ -94,10 +95,13 @@ map ,ch :PickHEX<cr>
 map ,cr :PickRGB<cr>
 map ,cl :PickHSL<cr>
 
-"===  PowerLine  ==============================================================
-Bundle "skwp/vim-powerline.git"
-let g:Powerline_symbols='fancy'
-let g:Powerline_theme='skwp'
-let g:Powerline_colorscheme='skwp'
+"===  Airline  ================================================================
+Bundle 'bling/vim-airline'
+let g:airline_powerline_fonts = 1
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+let g:airline_symbols.space = "\ua0"
 
 set laststatus=2 "always show the statusline
