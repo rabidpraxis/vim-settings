@@ -35,6 +35,25 @@ Bundle 'https://github.com/tpope/vim-fireplace.git'
 Bundle 'https://github.com/tpope/vim-classpath.git'
 Bundle 'https://github.com/guns/vim-clojure-static'
 Bundle 'https://github.com/kien/rainbow_parentheses.vim'
+" I use dark mode, so I need to limit the amount of dark colors
+let g:rbpt_colorpairs=[
+	\ ['brown',       'RoyalBlue3'],
+	\ ['Darkblue',    'SeaGreen3'],
+	\ ['darkgray',    'DarkOrchid3'],
+	\ ['darkgreen',   'firebrick3'],
+	\ ['darkcyan',    'RoyalBlue3'],
+	\ ['darkred',     'SeaGreen3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['brown',       'firebrick3'],
+	\ ['gray',        'RoyalBlue3'],
+	\ ['darkmagenta', 'DarkOrchid3'],
+	\ ['Darkblue',    'firebrick3'],
+	\ ['darkgreen',   'RoyalBlue3'],
+	\ ['darkcyan',    'SeaGreen3'],
+	\ ['darkred',     'DarkOrchid3'],
+	\ ['red',         'firebrick3'],
+	\ ]
+
 Bundle 'https://github.com/vim-scripts/paredit.vim.git'
 " This feature gets old, DISABLED!
 let g:paredit_electric_return=0
