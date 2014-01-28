@@ -80,29 +80,8 @@ map ,v :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 
 "===  ZenCoding  ==============================================================
-Bundle 'https://github.com/mattn/zencoding-vim.git'
-let g:user_zen_settings = {
-\  'php' : {
-\    'extends' : 'html',
-\    'filters' : 'c',
-\  },
-\  'xml' : {
-\    'extends' : 'html',
-\  },
-\  'haml' : {
-\    'filters' : 'haml',
-\  },
-\  'sass' : {
-\    'filters' : 'fc',
-\  },
-\}
-
-let g:user_zen_expandabbr_key = '<c-e>'
-let g:user_zen_next_key = '<leader><tab>'
-let g:user_zen_prev_key = '<c-g>'
-
-" Remap zen coding
-imap <C-z> <C-Y>,
+Bundle 'https://github.com/mattn/emmet-vim.git'
+let g:user_emmet_leader_key='<c-e>'
 
 "===  Ack  ====================================================================
 Bundle 'https://github.com/mileszs/ack.vim.git'
