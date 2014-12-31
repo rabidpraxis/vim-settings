@@ -34,3 +34,16 @@ map <leader>w <C-w>v<C-w>l
 
 " Open vimrc for quick editing
 nmap <leader>ev :e ~/.vim/vimrc<CR>
+
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
+  \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+" Fix movement on command line
+nnoremap <C-Right> gt
+nnoremap <C-Left> gT
+

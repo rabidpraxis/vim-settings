@@ -33,7 +33,8 @@ Bundle 'https://github.com/tpope/vim-ragtag.git'
 "===  Clojure  ================================================================
 Bundle 'https://github.com/tpope/vim-fireplace.git'
 Bundle 'https://github.com/tpope/vim-classpath.git'
-Bundle 'https://github.com/guns/vim-clojure-static'
+" Bundle 'https://github.com/guns/vim-clojure-static'
+" Bundle 'https://github.com/guns/vim-clojure-highlight'
 Bundle 'https://github.com/kien/rainbow_parentheses.vim'
 " I use dark mode, so I need to limit the amount of dark colors
 let g:rbpt_colorpairs=[
@@ -103,3 +104,13 @@ endif
 let g:airline_symbols.space = "\ua0"
 
 set laststatus=2 "always show the statusline
+
+"===  vim-slime  ==============================================================
+Bundle 'https://github.com/jpalardy/vim-slime.git'
+
+let g:slime_target = "tmux"
+" return cursor back to original point
+nmap <c-c><c-c> mb<Plug>SlimeParagraphSend`b
+
+"===  Work  ===================================================================
+Bundle 'https://github.com/mtscout6/vim-cjsx.git'

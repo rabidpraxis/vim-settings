@@ -4,18 +4,14 @@ import vim
 spacer_len = 71
 
 def cs(snip):
-    c = '#'
-    cs = snip.opt("&commentstring")
-    if len(cs) == 3:
-        c = cs[0]
-    return c
+    return snip.opt("&commentstring").replace("%s", "")
 def get_indent():
     return int(vim.eval('indent(".")'))
 def spaces(str):
     import re
     st = re.split('^(\s*)', str)
     if len(st)>1:
-        return len(st[1]) 
+        return len(st[1])
     else:
         return 0
 
