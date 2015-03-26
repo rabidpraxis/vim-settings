@@ -58,6 +58,10 @@ let g:rbpt_colorpairs=[
 Bundle 'https://github.com/vim-scripts/paredit.vim.git'
 " This feature gets old, DISABLED!
 let g:paredit_electric_return=0
+" Lets try smartjump
+let g:paredit_smartjump=1
+" We have a nice machine, lets bump this up
+let g:paredit_matchlines=1000
 
 "===  UltiSnips  ==============================================================
 Bundle 'https://github.com/SirVer/ultisnips.git'

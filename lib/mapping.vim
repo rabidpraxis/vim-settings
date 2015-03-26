@@ -30,7 +30,9 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 " Convenient window maker
-map <leader>w <C-w>v<C-w>l
+" NO MORE!
+map <leader>s <C-w>v<C-w>l
+
 
 " Open vimrc for quick editing
 nmap <leader>ev :e ~/.vim/vimrc<CR>
