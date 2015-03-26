@@ -35,6 +35,7 @@ Bundle 'https://github.com/tpope/vim-fireplace.git'
 Bundle 'https://github.com/tpope/vim-classpath.git'
 " Bundle 'https://github.com/guns/vim-clojure-static'
 " Bundle 'https://github.com/guns/vim-clojure-highlight'
+Bundle 'https://github.com/tpope/vim-leiningen.git'
 Bundle 'https://github.com/kien/rainbow_parentheses.vim'
 " I use dark mode, so I need to limit the amount of dark colors
 let g:rbpt_colorpairs=[
