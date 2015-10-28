@@ -109,14 +109,7 @@ map ,ch :PickHEX<cr>
 map ,cr :PickRGB<cr>
 map ,cl :PickHSL<cr>
 
-"===  Airline  ================================================================
-Plugin 'bling/vim-airline'
-let g:airline_powerline_fonts = 1
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-let g:airline_symbols.space = "\ua0"
+Plugin 'itchyny/lightline.vim'
 
 set laststatus=2 "always show the statusline
 
