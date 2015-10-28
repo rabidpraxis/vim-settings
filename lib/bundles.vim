@@ -1,11 +1,11 @@
 " set nocompatible
 " filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=$VIMINIT../bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
-Plugin 'file:///home/kevin/.vim/bundle/rabidpraxis', {'pinned': 1}
+Plugin 'file://' . $VIMINIT . '/bundle/rabidpraxis', {'pinned': 1}
 
 "===  Tabular  ================================================================
 Plugin 'godlygeek/tabular'

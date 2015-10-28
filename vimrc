@@ -8,7 +8,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 "===  Source Lib Files  =======================================================
-for scr in split(glob('~/.vim/lib/**'), '')
+for scr in split(globpath($VIMINIT, 'lib/**'), '\n')
   exec "source " . scr
 endfor
 
