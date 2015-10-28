@@ -84,11 +84,9 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " My custom ultisnips bundle area (outside of the root)
-" let g:UltiSnipsSnippetsDir="~/.vim/bundle/rabidpraxis/UltiSnips"
+let g:UltiSnipsSnippetsDir=$VIMPATH . "/bundle/rabidpraxis/UltiSnips"
 
-"===  Command T  ==============================================================
-Plugin 'git://git.wincent.com/command-t'
-let g:CommandTMatchWindowAtTop=1 " show window at top
+Plugin 'kien/ctrlp.vim'
 
 "===  NERDTree  ===============================================================
 Plugin 'scrooloose/nerdtree'
