@@ -9,7 +9,10 @@ set showcmd                    " display incomplete commands
 
 set noswapfile                 " Thats right, its annoying having to clean these up
 
-set clipboard+=unnamed         " yanks go on clipboard
+set backupdir=~/.vim-tmp
+set directory=~/.vim-tmp
+
+set clipboard=unnamedplus      " yanks go on clipboard
 set hidden                     " Buffers can go in the background
 
 " OmniComplete

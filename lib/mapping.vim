@@ -48,4 +48,3 @@ inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
 " Fix movement on command line
 nnoremap <C-Right> gt
 nnoremap <C-Left> gT
-

@@ -17,6 +17,8 @@ if has("autocmd")
   au Syntax clojure RainbowParenthesesLoadRound
   au Syntax clojure RainbowParenthesesLoadSquare
   au Syntax clojure RainbowParenthesesLoadBraces
+  au BufNewFile,BufRead *.cljc set filetype=clojure
+
 
   "---  Markdown  -------------------------------------------------------------
   au FileType markdown setlocal spell textwidth=80 linebreak

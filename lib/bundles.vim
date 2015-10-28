@@ -1,17 +1,21 @@
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set nocompatible
+" filetype off
 
-Bundle 'gmarik/vundle'
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+Plugin 'gmarik/vundle'
+Plugin 'file:///home/kevin/.vim/bundle/rabidpraxis', {'pinned': 1}
 
 "===  Tabular  ================================================================
-Bundle 'https://github.com/godlygeek/tabular.git'
+Plugin 'godlygeek/tabular'
 
 "===  Ruby and Rails  =========================================================
-Bundle 'https://github.com/vim-ruby/vim-ruby.git'
-Bundle 'https://github.com/tpope/vim-rails.git'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-rails'
 
 "===  Fugitive  ===============================================================
-Bundle 'https://github.com/tpope/vim-fugitive.git'
+Plugin 'tpope/vim-fugitive'
 " Every time you open a git object using fugitive it creates a new buffer.
 " This means that your buffer listing can quickly become swamped with
 " fugitive buffers. This prevents this from becomming an issue:
@@ -19,24 +23,30 @@ Bundle 'https://github.com/tpope/vim-fugitive.git'
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
 "===  Surround  ===============================================================
-Bundle 'https://github.com/tpope/vim-surround.git'
+Plugin 'tpope/vim-surround'
 
 "===  tComment  ===============================================================
-Bundle 'tComment'
-
-"===  Syntastic  ==============================================================
-Bundle 'https://github.com/scrooloose/syntastic.git'
+Plugin 'tComment'
 
 "===  Ragtag  =================================================================
-Bundle 'https://github.com/tpope/vim-ragtag.git'
+Plugin 'tpope/vim-ragtag'
+
+"===  TPopes  =================================================================
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-dispatch'
+
+"===  C & Debugging  ==========================================================
+Plugin 'vim-scripts/Conque-GDB'
+let g:ConqueGdb_Disable = 1
+" au BufRead,BufNewFile *.c let g:ConqueGdb_Disable = 0
 
 "===  Clojure  ================================================================
-Bundle 'https://github.com/tpope/vim-fireplace.git'
-Bundle 'https://github.com/tpope/vim-classpath.git'
-" Bundle 'https://github.com/guns/vim-clojure-static'
-" Bundle 'https://github.com/guns/vim-clojure-highlight'
-Bundle 'https://github.com/tpope/vim-leiningen.git'
-Bundle 'https://github.com/kien/rainbow_parentheses.vim'
+Plugin 'tpope/vim-fireplace'
+Plugin 'tpope/vim-classpath'
+Plugin 'guns/vim-clojure-static'
+" Plugin 'guns/vim-clojure-highlight'
+Plugin 'tpope/vim-leiningen'
+Plugin 'kien/rainbow_parentheses.vim'
 " I use dark mode, so I need to limit the amount of dark colors
 let g:rbpt_colorpairs=[
 	\ ['brown',       'RoyalBlue3'],
@@ -56,7 +66,7 @@ let g:rbpt_colorpairs=[
 	\ ['red',         'firebrick3'],
 	\ ]
 
-Bundle 'https://github.com/vim-scripts/paredit.vim.git'
+Plugin 'vim-scripts/paredit.vim'
 " This feature gets old, DISABLED!
 let g:paredit_electric_return=0
 " Lets try smartjump
@@ -65,8 +75,9 @@ let g:paredit_smartjump=1
 let g:paredit_matchlines=1000
 
 "===  UltiSnips  ==============================================================
-Bundle 'https://github.com/SirVer/ultisnips.git'
-Bundle "https://github.com/kchmck/vim-coffee-script.git"
+Plugin 'SirVer/ultisnips'
+Plugin 'kchmck/vim-coffee-script'
+
 set runtimepath+=~/.vim/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -74,33 +85,33 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " My custom ultisnips bundle area (outside of the root)
-let g:UltiSnipsSnippetsDir="~/.vim/bundle/rabidpraxis/UltiSnips"
+" let g:UltiSnipsSnippetsDir="~/.vim/bundle/rabidpraxis/UltiSnips"
 
 "===  Command T  ==============================================================
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'git://git.wincent.com/command-t'
 let g:CommandTMatchWindowAtTop=1 " show window at top
 
 "===  NERDTree  ===============================================================
-Bundle 'https://github.com/scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree'
 map ,v :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 
 "===  ZenCoding  ==============================================================
-Bundle 'https://github.com/mattn/emmet-vim.git'
+Plugin 'mattn/emmet-vim'
 let g:user_emmet_leader_key='<c-e>'
 
 "===  Ack  ====================================================================
-Bundle 'https://github.com/mileszs/ack.vim.git'
-nnoremap ,a :Ack
+Plugin 'rking/ag.vim'
+nnoremap ,a :Ag
 
 "===  Color Picker  ===========================================================
-Bundle 'PickAColor.vim'
+Plugin 'PickAColor.vim'
 map ,ch :PickHEX<cr>
 map ,cr :PickRGB<cr>
 map ,cl :PickHSL<cr>
 
 "===  Airline  ================================================================
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 let g:airline_powerline_fonts = 1
 
 if !exists('g:airline_symbols')
@@ -111,11 +122,30 @@ let g:airline_symbols.space = "\ua0"
 set laststatus=2 "always show the statusline
 
 "===  vim-slime  ==============================================================
-Bundle 'https://github.com/jpalardy/vim-slime.git'
+Plugin 'jpalardy/vim-slime'
 
 let g:slime_target = "tmux"
 " return cursor back to original point
 nmap <c-c><c-c> mb<Plug>SlimeParagraphSend`b
 
+"===  SQL  ====================================================================
+Plugin 'vim-scripts/dbext.vim'
+Plugin 'exu/pgsql.vim'
+
+let g:sql_type_default = 'postgresql'
+let g:dbext_default_profile_PG = 'type=PGSQL:user=kevin'
+let g:sql_type_default = 'pgsql'
+
 "===  Work  ===================================================================
-Bundle 'https://github.com/mtscout6/vim-cjsx.git'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
+
+"===  JSX  ====================================================================
+Plugin 'mxw/vim-jsx'
+let g:jsx_ext_required = 0
+
+Plugin 'digitaltoad/vim-jade'
+Plugin 'heavenshell/vim-jsdoc'
+
+call vundle#end()

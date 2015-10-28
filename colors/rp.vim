@@ -99,6 +99,7 @@ hi htmlSpecialChar  guifg=#3387cc ctermfg=68 guibg=NONE gui=NONE
 
 " Javascript Specific
 hi javaScriptFunction      guifg=#99cf50 ctermfg=113 guibg=NONE gui=NONE
+hi javascriptImportDef     guifg=#99cf50 ctermfg=113 guibg=NONE gui=NONE
 hi javaScriptRailsFunction guifg=#dad085 ctermfg=186 guibg=NONE gui=NONE
 hi javaScriptBraces        guifg=NONE    guibg=NONE  gui=NONE
 hi javaScriptLabel  guifg=#78adeb
