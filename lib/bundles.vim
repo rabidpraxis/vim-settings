@@ -1,8 +1,7 @@
 " set nocompatible
 " filetype off
 
-set rtp+=$VIMINIT../bundle/vundle/
-call vundle#begin()
+call vundle#begin($VIMINIT . '/bundle/vundle/')
 
 Plugin 'gmarik/vundle'
 Plugin 'file://' . $VIMINIT . '/bundle/rabidpraxis', {'pinned': 1}
@@ -78,7 +77,7 @@ let g:paredit_matchlines=1000
 Plugin 'SirVer/ultisnips'
 Plugin 'kchmck/vim-coffee-script'
 
-set runtimepath+=~/.vim/bundle/UltiSnips
+set runtimepath+=$VIMINT/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
