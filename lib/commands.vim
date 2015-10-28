@@ -23,9 +23,6 @@ if has("autocmd")
   "---  Markdown  -------------------------------------------------------------
   au FileType markdown setlocal spell textwidth=80 linebreak
 
-  " Source the vimrc file after saving it
-  au! bufwritepost vimrc,$HOME/.vim/lib/*.vim source $MYVIMRC
-
   "---  Reload UltiSnips  -----------------------------------------------------
   au! bufwritepost *.snippets UltiSnipsReset
 

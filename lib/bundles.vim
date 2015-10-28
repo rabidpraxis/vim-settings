@@ -1,7 +1,7 @@
 " set nocompatible
 " filetype off
 
-call vundle#begin($VIMINIT . '/bundle/vundle/')
+call vundle#begin($VIMINIT . '/bundle/')
 
 Plugin 'gmarik/vundle'
 Plugin 'file://' . $VIMINIT . '/bundle/rabidpraxis', {'pinned': 1}

@@ -1,6 +1,8 @@
 "==============================================================================
 " rabidpraxis vimrc
 "==============================================================================
+set rtp=$VIMINIT,$VIMINIT/after,$VIMRUNTIME
+
 set nocompatible                " No vi compatability
 filetype off
 " Pathogen Setup
