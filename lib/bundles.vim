@@ -77,7 +77,7 @@ let g:paredit_matchlines=1000
 Plugin 'SirVer/ultisnips'
 Plugin 'kchmck/vim-coffee-script'
 
-set runtimepath+=$VIMINT/bundle/UltiSnips
+set runtimepath+=$VIMINIT/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
