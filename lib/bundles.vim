@@ -1,10 +1,10 @@
 " set nocompatible
 " filetype off
 
-call vundle#begin($VIMINIT . '/bundle/')
+call vundle#begin($VIMPATH . '/bundle/')
 
 Plugin 'gmarik/vundle'
-Plugin 'file://' . $VIMINIT . '/bundle/rabidpraxis', {'pinned': 1}
+Plugin 'file://' . $VIMPATH . '/bundle/rabidpraxis', {'pinned': 1}
 
 "===  Tabular  ================================================================
 Plugin 'godlygeek/tabular'
@@ -77,7 +77,7 @@ let g:paredit_matchlines=1000
 Plugin 'SirVer/ultisnips'
 Plugin 'kchmck/vim-coffee-script'
 
-set runtimepath+=$VIMINIT/bundle/UltiSnips
+set runtimepath+=$VIMPATH/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
