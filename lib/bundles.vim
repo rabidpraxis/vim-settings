@@ -126,6 +126,9 @@ let g:sql_type_default = 'postgresql'
 let g:dbext_default_profile_PG = 'type=PGSQL:user=kevin'
 let g:sql_type_default = 'pgsql'
 
+"===  Markdown  ===============================================================
+Plugin 'plasticboy/vim-markdown'
+
 "===  Work  ===================================================================
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'pangloss/vim-javascript'
@@ -137,5 +140,6 @@ let g:jsx_ext_required = 0
 
 Plugin 'digitaltoad/vim-jade'
 Plugin 'heavenshell/vim-jsdoc'
+let g:jsdoc_enable_es6 = 1
 
 call vundle#end()
