@@ -9,12 +9,12 @@ filetype off
 call pathogen#infect()
 call pathogen#helptags()
 
+filetype plugin indent on       " Enable file type detection.
+syntax on                       " Enable Syntax
+
 "===  Source Lib Files  =======================================================
 for scr in split(globpath($VIMPATH, 'lib/**'), '\n')
   exec "source " . scr
 endfor
-
-filetype plugin indent on       " Enable file type detection.
-syntax on                       " Enable Syntax
 
 " vim:ft=vim fdm=marker
