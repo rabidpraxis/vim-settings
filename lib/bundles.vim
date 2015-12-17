@@ -43,7 +43,7 @@ let g:ConqueGdb_Disable = 1
 Plugin 'tpope/vim-fireplace'
 Plugin 'tpope/vim-classpath'
 Plugin 'guns/vim-clojure-static'
-" Plugin 'guns/vim-clojure-highlight'
+Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-leiningen'
 Plugin 'kien/rainbow_parentheses.vim'
 " I use dark mode, so I need to limit the amount of dark colors
