@@ -21,8 +21,6 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^do',
       \ '^with',
       \ '^def',
-      \ '^or',
-      \ '^and',
       \ '^let',
       \ '^select',
       \ '^insert',
@@ -58,5 +56,7 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^wired{.*}',
       \ '^taps',
       \ '^defclass',
-      \ '^defui'
+      \ '^defui',
+      \ '^query',
+      \ '^ident'
       \ ]
