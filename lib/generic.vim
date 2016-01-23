@@ -11,7 +11,7 @@ set noswapfile                 " Thats right, its annoying having to clean these
 
 set viewdir=$VIMPATH/view
 
-set clipboard=unnamedplus      " yanks go on clipboard
+set clipboard=unnamed,unnamedplus " works both with OS X and ssh X11
 set hidden                     " Buffers can go in the background
 
 " OmniComplete
