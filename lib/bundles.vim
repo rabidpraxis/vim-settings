@@ -12,6 +12,7 @@ Plugin 'godlygeek/tabular'
 "===  Ruby and Rails  =========================================================
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-bundler'
 
 "===  Fugitive  ===============================================================
