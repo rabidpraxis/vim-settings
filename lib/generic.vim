@@ -18,3 +18,5 @@ set hidden                     " Buffers can go in the background
 set completeopt=longest,menuone " Vim's popup menu doesn't select the first
                                 " completion item, but rather just inserts the
                                 " longest common text of all matches
+                                "
+set tags+=external.tags
