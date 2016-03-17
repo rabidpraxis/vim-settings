@@ -11,10 +11,7 @@ Plugin 'godlygeek/tabular'
 
 "===  Ruby and Rails  =========================================================
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-rbenv'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-projectionist.git'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
