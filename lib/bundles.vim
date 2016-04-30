@@ -12,9 +12,9 @@ Plugin 'godlygeek/tabular'
 "===  Ruby and Rails  =========================================================
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-projectionist.git'
-Plugin 'kana/vim-textobj-user'
-Plugin 'nelstrom/vim-textobj-rubyblock'
+" Plugin 'tpope/vim-projectionist.git'
+" Plugin 'kana/vim-textobj-user'
+" Plugin 'nelstrom/vim-textobj-rubyblock'
 
 "===  Fugitive  ===============================================================
 Plugin 'tpope/vim-fugitive'
@@ -38,52 +38,52 @@ Plugin 'tComment'
 Plugin 'tpope/vim-ragtag'
 
 "===  TPopes  =================================================================
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-unimpaired'
+" Plugin 'tpope/vim-dispatch'
 
 "===  C & Debugging  ==========================================================
-Plugin 'vim-scripts/Conque-GDB'
-let g:ConqueGdb_Disable = 1
+" Plugin 'vim-scripts/Conque-GDB'
+" let g:ConqueGdb_Disable = 1
 " au BufRead,BufNewFile *.c let g:ConqueGdb_Disable = 0
 
 "===  Clojure  ================================================================
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-classpath'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'tpope/vim-leiningen'
-Plugin 'kien/rainbow_parentheses.vim'
-" I use dark mode, so I need to limit the amount of dark colors
-let g:rbpt_colorpairs=[
-	\ ['brown',       'RoyalBlue3'],
-	\ ['Darkblue',    'SeaGreen3'],
-	\ ['darkgray',    'DarkOrchid3'],
-	\ ['darkgreen',   'firebrick3'],
-	\ ['darkcyan',    'RoyalBlue3'],
-	\ ['darkred',     'SeaGreen3'],
-	\ ['darkmagenta', 'DarkOrchid3'],
-	\ ['brown',       'firebrick3'],
-	\ ['gray',        'RoyalBlue3'],
-	\ ['darkmagenta', 'DarkOrchid3'],
-	\ ['Darkblue',    'firebrick3'],
-	\ ['darkgreen',   'RoyalBlue3'],
-	\ ['darkcyan',    'SeaGreen3'],
-	\ ['darkred',     'DarkOrchid3'],
-	\ ['red',         'firebrick3'],
-	\ ]
+" Plugin 'tpope/vim-fireplace'
+" Plugin 'tpope/vim-classpath'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'guns/vim-clojure-highlight'
+" Plugin 'tpope/vim-leiningen'
+" Plugin 'kien/rainbow_parentheses.vim'
+" " I use dark mode, so I need to limit the amount of dark colors
+" let g:rbpt_colorpairs=[
+" 	\ ['brown',       'RoyalBlue3'],
+" 	\ ['Darkblue',    'SeaGreen3'],
+" 	\ ['darkgray',    'DarkOrchid3'],
+" 	\ ['darkgreen',   'firebrick3'],
+" 	\ ['darkcyan',    'RoyalBlue3'],
+" 	\ ['darkred',     'SeaGreen3'],
+" 	\ ['darkmagenta', 'DarkOrchid3'],
+" 	\ ['brown',       'firebrick3'],
+" 	\ ['gray',        'RoyalBlue3'],
+" 	\ ['darkmagenta', 'DarkOrchid3'],
+" 	\ ['Darkblue',    'firebrick3'],
+" 	\ ['darkgreen',   'RoyalBlue3'],
+" 	\ ['darkcyan',    'SeaGreen3'],
+" 	\ ['darkred',     'DarkOrchid3'],
+" 	\ ['red',         'firebrick3'],
+" 	\ ]
 
-Plugin 'vim-scripts/paredit.vim'
-" This feature gets old, DISABLED!
-let g:paredit_electric_return=0
-" Lets try smartjump
-let g:paredit_smartjump=1
-" We have a nice machine, lets bump this up
-let g:paredit_matchlines=1000
+" Plugin 'vim-scripts/paredit.vim'
+" " This feature gets old, DISABLED!
+" let g:paredit_electric_return=0
+" " Lets try smartjump
+" let g:paredit_smartjump=1
+" " We have a nice machine, lets bump this up
+" let g:paredit_matchlines=1000
 
-"===  UltiSnips  ==============================================================
+" "===  UltiSnips  ==============================================================
 Plugin 'SirVer/ultisnips'
-Plugin 'kchmck/vim-coffee-script'
-
+" Plugin 'kchmck/vim-coffee-script'
+"
 set runtimepath+=$VIMPATH/bundle/UltiSnips
 " Remove mapping to c-m before setting trigger
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -93,7 +93,16 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " My custom ultisnips bundle area (outside of the root)
 let g:UltiSnipsSnippetsDir=$VIMPATH . "/bundle/rabidpraxis/UltiSnips"
 
-Plugin 'kien/ctrlp.vim'
+" Plugin 'kien/ctrlp.vim'
+"
+" " Use silver searcher for indexing
+" if executable('ag')
+"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" endif
+
+Plugin 'wincent/command-t'
+" nnoremap <silent> <Leader>t <Plug>(CommandT)
+" nmap <D-t> <Plug>(CommandT)
 
 "===  NERDTree  ===============================================================
 Plugin 'scrooloose/nerdtree'
@@ -108,40 +117,49 @@ let g:user_emmet_leader_key='<c-e>'
 Plugin 'rking/ag.vim'
 nnoremap ,a :Ag
 
-"===  Color Picker  ===========================================================
-Plugin 'PickAColor.vim'
-map ,ch :PickHEX<cr>
-map ,cr :PickRGB<cr>
-map ,cl :PickHSL<cr>
+" "===  Color Picker  ===========================================================
+" Plugin 'PickAColor.vim'
+" map ,ch :PickHEX<cr>
+" map ,cr :PickRGB<cr>
+" map ,cl :PickHSL<cr>
 
 Plugin 'itchyny/lightline.vim'
 
+let g:lightline = {
+      \ 'component_function': {
+      \   'filename': 'LightLineFilename'
+      \ }
+      \ }
+function! LightLineFilename()
+  return expand('%')
+endfunction
+
 set laststatus=2 "always show the statusline
 
-"===  vim-slime  ==============================================================
-Plugin 'jpalardy/vim-slime'
-
-let g:slime_target = "tmux"
-" return cursor back to original point
-nmap <c-c><c-c> mb<Plug>SlimeParagraphSend`b
-
-"===  SQL  ====================================================================
-Plugin 'vim-scripts/dbext.vim'
-Plugin 'exu/pgsql.vim'
-
-let g:sql_type_default = 'postgresql'
-let g:dbext_default_profile_PG = 'type=PGSQL:user=kevin'
-let g:sql_type_default = 'pgsql'
+" "===  vim-slime  ==============================================================
+" Plugin 'jpalardy/vim-slime'
+"
+" let g:slime_target = "tmux"
+" " return cursor back to original point
+" nmap <c-c><c-c> mb<Plug>SlimeParagraphSend`b
+"
+" "===  SQL  ====================================================================
+" Plugin 'vim-scripts/dbext.vim'
+" Plugin 'exu/pgsql.vim'
+"
+" let g:sql_type_default = 'postgresql'
+" let g:dbext_default_profile_PG = 'type=PGSQL:user=kevin'
+" let g:sql_type_default = 'pgsql'
 
 "===  Markdown  ===============================================================
 Plugin 'plasticboy/vim-markdown'
 
-"===  Work  ===================================================================
+" "===  Work  ===================================================================
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'pangloss/vim-javascript'
-Plugin 'othree/yajs.vim'
+" Plugin 'othree/yajs.vim'
 
-"===  JSX  ====================================================================
+" "===  JSX  ====================================================================
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 

@@ -15,6 +15,11 @@ endif
 
 let g:colors_name = "rp"
 
+hi DiffChange cterm=none ctermfg=black ctermbg=LightGreen  gui=none guifg=bg guibg=LightGreen
+hi DiffAdd    cterm=none ctermfg=black ctermbg=Green       gui=bold guifg=bg guibg=Green
+hi DiffDelete cterm=none ctermfg=black ctermbg=Red         gui=none guifg=bg guibg=Red
+hi DiffText   cterm=none ctermfg=black ctermbg=White       gui=none guifg=bg guibg=White
+
 hi Cursor       guifg=NONE    guibg=#ffffff ctermbg=15    gui=NONE
 hi Visual       guifg=NONE    guibg=#3a424d ctermbg=238   gui=NONE
 hi CursorLine   guifg=NONE    guibg=#1d222c ctermbg=235   cterm=NONE gui=NONE

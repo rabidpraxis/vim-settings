@@ -1,5 +1,5 @@
 set number               " Show line numbers
-set cursorline           " Always show cursor line
+" set cursorline           " Always show cursor line
 set novisualbell         " I don't mind beeping
 set guicursor=a:blinkon0 " cursor setting
 

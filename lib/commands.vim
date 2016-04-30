@@ -11,6 +11,8 @@ if has("autocmd")
   au FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
   au FileType ruby,eruby let g:rubycomplete_rails = 1
   au FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+  " Using old regex engine for loading ruby files. Much better performance
+  au FileType ruby,eruby set re=1
 
   "---  Clojure  --------------------------------------------------------------
   au FileType clojure RainbowParenthesesActivate
@@ -30,7 +32,7 @@ if has("autocmd")
   au BufWinLeave ?* mkview
   au BufWinEnter ?* silent loadview
 
-  " Buffer diff
+
   if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
         \ | wincmd p | diffthis
