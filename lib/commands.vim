@@ -25,9 +25,6 @@ if has("autocmd")
   "---  Markdown  -------------------------------------------------------------
   au FileType markdown setlocal spell textwidth=80 linebreak
 
-  "---  Reload UltiSnips  -----------------------------------------------------
-  au! bufwritepost *.snippets UltiSnipsReset
-
   "---  Save Folding, Window, and Cursor upon exit  ---------------------------
   au BufWinLeave ?* mkview
   au BufWinEnter ?* silent loadview
