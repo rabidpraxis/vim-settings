@@ -24,6 +24,9 @@ Plugin 'tpope/vim-fugitive'
 
 autocmd BufReadPost fugitive://* set bufhidden=delete
 
+Plugin 'idanarye/vim-merginal'
+Plugin 'airblade/vim-gitgutter'
+
 "===  Surround  ===============================================================
 Plugin 'tpope/vim-surround'
 
@@ -38,7 +41,7 @@ Plugin 'tComment'
 Plugin 'tpope/vim-ragtag'
 
 "===  TPopes  =================================================================
-" Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-unimpaired'
 " Plugin 'tpope/vim-dispatch'
 
 "===  C & Debugging  ==========================================================
@@ -126,12 +129,24 @@ nnoremap ,a :Ag
 Plugin 'itchyny/lightline.vim'
 
 let g:lightline = {
-      \ 'component_function': {
-      \   'filename': 'LightLineFilename'
-      \ }
-      \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'fugitive', 'filename' ] ]
+  \ },
+  \ 'component_function': {
+  \   'filename': 'LightLineFilename',
+  \   'fugitive': 'LightLineFugitive'
+  \ },
+  \ 'separator': { 'left': '', 'right': '' },
+  \ 'subseparator': { 'left': '', 'right': '' }
+\ }
+
 function! LightLineFilename()
   return expand('%')
+endfunction
+
+function! LightLineFugitive()
+  return fugitive#head()
 endfunction
 
 set laststatus=2 "always show the statusline
