@@ -121,10 +121,10 @@ Plugin 'rking/ag.vim'
 nnoremap ,a :Ag
 
 " "===  Color Picker  ===========================================================
-" Plugin 'PickAColor.vim'
-" map ,ch :PickHEX<cr>
-" map ,cr :PickRGB<cr>
-" map ,cl :PickHSL<cr>
+Plugin 'PickAColor.vim'
+map ,ch :PickHEX<cr>
+map ,cr :PickRGB<cr>
+map ,cl :PickHSL<cr>
 
 Plugin 'itchyny/lightline.vim'
 
@@ -151,6 +151,10 @@ endfunction
 
 set laststatus=2 "always show the statusline
 
+
+Plugin 'tyru/open-browser.vim'
+Plugin 'tyru/open-browser-github.vim'
+
 " "===  vim-slime  ==============================================================
 " Plugin 'jpalardy/vim-slime'
 "
@@ -173,6 +177,9 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'mtscout6/vim-cjsx'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'othree/yajs.vim'
+
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'vim-erlang/vim-erlang-runtime'
 
 " "===  JSX  ====================================================================
 Plugin 'mxw/vim-jsx'
