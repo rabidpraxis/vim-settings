@@ -11,10 +11,12 @@ Plugin 'godlygeek/tabular'
 
 "===  Ruby and Rails  =========================================================
 Plugin 'vim-ruby/vim-ruby'
+let ruby_no_expensive=1
+
 Plugin 'tpope/vim-rails'
-" Plugin 'tpope/vim-projectionist.git'
-" Plugin 'kana/vim-textobj-user'
-" Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'tpope/vim-projectionist.git'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 "===  Fugitive  ===============================================================
 Plugin 'tpope/vim-fugitive'
@@ -96,12 +98,12 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " My custom ultisnips bundle area (outside of the root)
 let g:UltiSnipsSnippetsDir=$VIMPATH . "/bundle/rabidpraxis/UltiSnips"
 
-" Plugin 'kien/ctrlp.vim'
-"
-" " Use silver searcher for indexing
-" if executable('ag')
-"   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-" endif
+Plugin 'kien/ctrlp.vim'
+
+" Use silver searcher for indexing
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 Plugin 'wincent/command-t'
 " nnoremap <silent> <Leader>t <Plug>(CommandT)
@@ -154,6 +156,8 @@ set laststatus=2 "always show the statusline
 
 Plugin 'tyru/open-browser.vim'
 Plugin 'tyru/open-browser-github.vim'
+
+Plugin 'Shougo/unite.vim'
 
 " "===  vim-slime  ==============================================================
 " Plugin 'jpalardy/vim-slime'
