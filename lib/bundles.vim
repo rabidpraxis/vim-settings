@@ -182,8 +182,11 @@ Plugin 'mtscout6/vim-cjsx'
 Plugin 'pangloss/vim-javascript'
 " Plugin 'othree/yajs.vim'
 
+Plugin 'fatih/vim-go'
+
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-erlang/vim-erlang-runtime'
+Plugin 'rodjek/vim-puppet'
 
 " "===  JSX  ====================================================================
 Plugin 'mxw/vim-jsx'
