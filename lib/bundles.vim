@@ -196,4 +196,6 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'heavenshell/vim-jsdoc'
 let g:jsdoc_enable_es6 = 1
 
+Plugin 'elmcast/elm-vim'
+
 call vundle#end()

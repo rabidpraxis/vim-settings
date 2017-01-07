@@ -9,7 +9,7 @@ set wildmenu              " make tab completion for files/buffers act like bash
 set wildmode=list:longest " show a list when pressing tab and complete
 "
  " patterns to ignore during file/directory completion
-set wildignore+=tmp/**,*/node_modules/**,target/**
+set wildignore+=tmp/**,*/node_modules/**,target/**,*/elm-stuff/**
 
 set winwidth=80           " Ensure that the splits are always at least 80 wide
 
