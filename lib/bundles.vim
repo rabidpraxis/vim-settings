@@ -159,6 +159,17 @@ Plugin 'tyru/open-browser-github.vim'
 
 Plugin 'Shougo/unite.vim'
 
+"===  Tagbar  =================================================================
+Plugin 'majutsushi/tagbar'
+map ,d :TagbarToggle<cr>
+let g:tagbar_compact = 1
+let g:tagbar_sort = 0
+let g:tagbar_indent = 1
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+:let g:easytags_suppress_ctags_warning = 1
+
 " "===  vim-slime  ==============================================================
 " Plugin 'jpalardy/vim-slime'
 "
@@ -177,18 +188,18 @@ Plugin 'Shougo/unite.vim'
 "===  Markdown  ===============================================================
 Plugin 'plasticboy/vim-markdown'
 
-" "===  Work  ===================================================================
-Plugin 'mtscout6/vim-cjsx'
-Plugin 'pangloss/vim-javascript'
-" Plugin 'othree/yajs.vim'
-
+"===  Go  =====================================================================
 Plugin 'fatih/vim-go'
 
+"===  Elixir  =================================================================
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'vim-erlang/vim-erlang-runtime'
 Plugin 'rodjek/vim-puppet'
 
-" "===  JSX  ====================================================================
+"===  Javascript  =============================================================
+" Plugin 'othree/yajs.vim'
+Plugin 'mtscout6/vim-cjsx'
+Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 
@@ -196,6 +207,8 @@ Plugin 'digitaltoad/vim-jade'
 Plugin 'heavenshell/vim-jsdoc'
 let g:jsdoc_enable_es6 = 1
 
+"===  Elm  ====================================================================
 Plugin 'elmcast/elm-vim'
+Plugin 'bitterjug/vim-tagbar-ctags-elm'
 
 call vundle#end()
