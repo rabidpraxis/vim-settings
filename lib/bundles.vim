@@ -6,6 +6,13 @@ call vundle#begin($VIMPATH . '/bundle/')
 Plugin 'gmarik/vundle'
 Plugin 'file://' . $VIMPATH . '/bundle/rabidpraxis', {'pinned': 1}
 
+Plugin 'janko-m/vim-test'
+nmap <silent> ,fn :TestNearest<CR>
+nmap <silent> ,ft :TestFile<CR>
+nmap <silent> ,fa :TestSuite<CR>
+nmap <silent> ,fl :TestLast<CR>
+nmap <silent> ,fg :TestVisit<CR>
+
 "===  Tabular  ================================================================
 Plugin 'godlygeek/tabular'
 
@@ -190,6 +197,7 @@ Plugin 'plasticboy/vim-markdown'
 
 "===  Go  =====================================================================
 Plugin 'fatih/vim-go'
+map ,gi :GoImports<cr>
 
 "===  Elixir  =================================================================
 Plugin 'elixir-lang/vim-elixir'
