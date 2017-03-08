@@ -35,3 +35,7 @@ if has("autocmd")
         \ | wincmd p | diffthis
   endif
 endif
+
+augroup vimrc
+  autocmd QuickFixCmdPost * botright copen 8
+augroup END

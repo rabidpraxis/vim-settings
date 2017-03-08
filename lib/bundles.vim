@@ -13,6 +13,19 @@ nmap <silent> ,fa :TestSuite<CR>
 nmap <silent> ,fl :TestLast<CR>
 nmap <silent> ,fg :TestVisit<CR>
 
+let g:test#strategy = 'asyncrun'
+let g:test#preserve_screen = 1
+
+
+let g:test#ruby#rspec#options = "--no-profile --format progress --require ~/.dotfiles/utils/code/quickfix_formatter.rb --format QuickfixFormatter --out quickfix.out"
+" let g:test#ruby#rspec#options = {
+"   \ 'nearest': '--backtrace --no-profile',
+"   \ 'file':    '--format documentation --no-profile',
+"   \ 'suite':   '--tag ~slow',
+" \}
+
+Plugin 'skywind3000/asyncrun.vim'
+
 "===  Tabular  ================================================================
 Plugin 'godlygeek/tabular'
 
@@ -174,8 +187,8 @@ let g:tagbar_sort = 0
 let g:tagbar_indent = 1
 
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
-:let g:easytags_suppress_ctags_warning = 1
+" Plugin 'xolox/vim-easytags'
+" :let g:easytags_suppress_ctags_warning = 1
 
 " "===  vim-slime  ==============================================================
 " Plugin 'jpalardy/vim-slime'
