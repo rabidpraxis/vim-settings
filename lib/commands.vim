@@ -14,20 +14,12 @@ if has("autocmd")
   " Using old regex engine for loading ruby files. Much better performance
   au FileType ruby,eruby set re=1
 
-  "---  Clojure  --------------------------------------------------------------
-  au FileType clojure RainbowParenthesesActivate
-  au Syntax clojure RainbowParenthesesLoadRound
-  au Syntax clojure RainbowParenthesesLoadSquare
-  au Syntax clojure RainbowParenthesesLoadBraces
-  au BufNewFile,BufRead *.cljc set filetype=clojure
-
-
   "---  Markdown  -------------------------------------------------------------
   au FileType markdown setlocal spell textwidth=80 linebreak
 
   "---  Save Folding, Window, and Cursor upon exit  ---------------------------
-  au BufWinLeave ?* mkview
-  au BufWinEnter ?* silent loadview
+  " au BufWinLeave ?* mkview
+  " au BufWinEnter ?* silent loadview
 
 
   if !exists(":DiffOrig")

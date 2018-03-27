@@ -1,7 +1,11 @@
-au VimEnter *.clj RainbowParenthesesToggle
-au Syntax *.clj RainbowParenthesesLoadRound
-au Syntax *.clj RainbowParenthesesLoadSquare
-au Syntax *.clj RainbowParenthesesLoadBraces
+" au VimEnter *.clj RainbowParenthesesToggle
+" au Syntax *.clj RainbowParenthesesLoadRound
+" au Syntax *.clj RainbowParenthesesLoadSquare
+" au Syntax *.clj RainbowParenthesesLoadBraces
+
+" ---- Mappings
+" Call Eval on outermost form
+nmap <leader>ce :Eval<CR>
 
 " let g:clojure_fuzzy_indent_patterns = ['defclass', 'with-pre-wrap', 'with-post-wrap', 'dom{.*}$', 'deftask', 'go-loop', 'wired{.*}', 'taps']
 let g:clojure_maxlines = 150
@@ -15,7 +19,6 @@ let g:clojure_fold = 1
 au BufNewFile,BufRead *.boot set filetype=clojure
 
 let g:clojure_special_indent_words = 'render,deftype,defrecord,reify,proxy,extend-type,extend-protocol,letfn'
-
 let g:clojure_fuzzy_indent = 1
 let g:clojure_fuzzy_indent_patterns = [
       \ '^do',
@@ -45,6 +48,7 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^drop',
       \ '^fact',
       \ '^->',
+      \ '^->>',
       \ '^dom\/{.*}',
       \ '^did',
       \ '^will',

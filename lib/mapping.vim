@@ -12,7 +12,7 @@ inoremap <C-U> <C-G>u<C-U>
 imap jj <esc>
 
 " Don't require shift for entering commands
-noremap ; :
+" noremap ; :
 
 " Remove arrow key functionality
 nnoremap <up> <nop>
