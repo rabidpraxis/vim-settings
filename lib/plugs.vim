@@ -8,34 +8,62 @@ Plug 'w0rp/ale'
 let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_enter = 0
 
-"===  Ultisnips  ==============================================================
+" Ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
-"===  Nerdtree  ===============================================================
+" Nerdtree
 Plug 'scrooloose/nerdtree'
 map ,v :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
 
-"===  Ag  =====================================================================
+" Ag
 Plug 'mileszs/ack.vim'
 nnoremap ,a :Ack
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
 
-"===  Fzf  ====================================================================
+" Fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 map <C-p> :Files<cr>
 map <C-;> :Buffers<cr>
 
-" "===  TPopes  =================================================================
+" TPopes
 Plug 'tpope/vim-unimpaired'
 
-"===  Clojure  ================================================================
+" Testing
+Plug 'janko-m/vim-test'
+Plug 'jgdavey/tslime.vim'
+
+nmap <silent> ,fn :TestNearest<CR>
+nmap <silent> ,ft :TestFile<CR>
+nmap <silent> ,fa :TestSuite<CR>
+nmap <silent> ,fl :TestLast<CR>
+nmap <silent> ,fg :TestVisit<CR>
+
+let g:test#strategy = 'tslime'
+let g:test#preserve_screen = 0
+
+let test#ruby#rspec#executable = 'bundle exec spring rspec'
+let g:test#ruby#rspec#options = {
+  \ 'nearest': '--backtrace --no-profile',
+  \ 'file':    '--format documentation --no-profile',
+  \ 'suite':   '--tag ~slow',
+\}
+
+let test#javascript#mocha#options = '--compilers js:babel-register --require babel-polyfill'
+
+" Rubies
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'kana/vim-textobj-user'
+Plug 'nelstrom/vim-textobj-rubyblock'
+
+" Clojure
 Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-clojure-static'
@@ -78,12 +106,15 @@ let g:paredit_smartjump=1
 let g:paredit_matchlines=1000
 
 
+" Git
 Plug 'tpope/vim-fugitive'
+Plug 'idanarye/vim-merginal'
+Plug 'airblade/vim-gitgutter'
 
-"===  tComment  ===============================================================
+" tComment
 Plug 'tomtom/tcomment_vim'
 
-" ===  Lightline  ==============================================================
+" Lightline
 Plug 'itchyny/lightline.vim'
 
 let g:lightline = {
