@@ -4,9 +4,15 @@ call plug#begin($VIMPATH . '/plugged/')
 Plug 'sheerun/vim-polyglot'
 
 " Ale
-Plug 'w0rp/ale'
-let g:ale_lint_on_text_changed = 'never'
-let g:ale_lint_on_enter = 0
+" Plug 'w0rp/ale'
+" let g:ale_lint_on_text_changed = 'never'
+" let g:ale_lint_on_enter = 0
+
+" Tagbar
+Plug 'majutsushi/tagbar'
+
+" Tabular
+Plug 'godlygeek/tabular'
 
 " Ultisnips
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -18,6 +24,10 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 Plug 'scrooloose/nerdtree'
 map ,v :NERDTreeToggle<cr>
 let NERDTreeShowHidden=1
+
+" Emmet
+Plug 'mattn/emmet-vim'
+let g:user_emmet_leader_key='<c-e>'
 
 " Ag
 Plug 'mileszs/ack.vim'
@@ -34,6 +44,10 @@ map <C-;> :Buffers<cr>
 
 " TPopes
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-ragtag'
+
+" JsDoc
+Plug 'heavenshell/vim-jsdoc'
 
 " Testing
 Plug 'janko-m/vim-test'
@@ -48,14 +62,13 @@ nmap <silent> ,fg :TestVisit<CR>
 let g:test#strategy = 'tslime'
 let g:test#preserve_screen = 0
 
-let test#ruby#rspec#executable = 'bundle exec spring rspec'
+" let test#ruby#rspec#executable = 'bundle exec spring rspec'
 let g:test#ruby#rspec#options = {
-  \ 'nearest': '--backtrace --no-profile',
-  \ 'file':    '--format documentation --no-profile',
+  \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
 \}
 
-let test#javascript#mocha#options = '--compilers js:babel-register --require babel-polyfill'
+let test#javascript#mocha#options = '--require babel-register --require babel-polyfill'
 
 " Rubies
 Plug 'vim-ruby/vim-ruby'
@@ -67,7 +80,7 @@ Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-clojure-static'
-Plug 'tpope/vim-leiningen'
+" Plug 'tpope/vim-leiningen'
 Plug 'kien/rainbow_parentheses.vim'
 
 if has("autocmd")
@@ -105,6 +118,11 @@ let g:paredit_smartjump=1
 " We have a nice machine, lets bump this up
 let g:paredit_matchlines=1000
 
+Plug 'jparise/vim-graphql'
+
+" Go
+Plug 'fatih/vim-go'
+map ,gi :GoImports<cr>
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -116,6 +134,12 @@ Plug 'tomtom/tcomment_vim'
 
 " Lightline
 Plug 'itchyny/lightline.vim'
+
+Plug 'KabbAmine/vCoolor.vim'
+let g:vcoolor_map = ',ch'
+let g:vcool_ins_rgb_map = ',cr'		" Insert rgb color.
+let g:vcool_ins_hsl_map = ',cl'		" Insert hsl color.
+let g:vcool_ins_rgba_map = ',cra'		" Insert rgba color.
 
 let g:lightline = {
   \ 'active': {

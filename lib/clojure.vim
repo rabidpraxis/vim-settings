@@ -5,7 +5,7 @@
 
 " ---- Mappings
 " Call Eval on outermost form
-nmap <leader>ce :Eval<CR>
+nmap ,ce :Eval<CR>
 
 " let g:clojure_fuzzy_indent_patterns = ['defclass', 'with-pre-wrap', 'with-post-wrap', 'dom{.*}$', 'deftask', 'go-loop', 'wired{.*}', 'taps']
 let g:clojure_maxlines = 150
@@ -47,8 +47,6 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^table',
       \ '^drop',
       \ '^fact',
-      \ '^->',
-      \ '^->>',
       \ '^dom\/{.*}',
       \ '^did',
       \ '^will',
