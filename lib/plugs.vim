@@ -62,7 +62,7 @@ nmap <silent> ,fg :TestVisit<CR>
 let g:test#strategy = 'tslime'
 let g:test#preserve_screen = 0
 
-" let test#ruby#rspec#executable = 'bundle exec spring rspec'
+let test#ruby#rspec#executable = 'bundle exec spring rspec'
 let g:test#ruby#rspec#options = {
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
@@ -76,7 +76,7 @@ Plug 'tpope/vim-rails'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 
-" Clojure
+" Clojures
 Plug 'tpope/vim-fireplace'
 Plug 'guns/vim-clojure-highlight'
 Plug 'guns/vim-clojure-static'
@@ -120,9 +120,15 @@ let g:paredit_matchlines=1000
 
 Plug 'jparise/vim-graphql'
 
-" Go
+" Gos
 Plug 'fatih/vim-go'
 map ,gi :GoImports<cr>
+
+" Elixirs
+Plug 'elixir-editors/vim-elixir'
+
+"Rust
+Plug 'rust-lang/rust.vim'
 
 " Git
 Plug 'tpope/vim-fugitive'
