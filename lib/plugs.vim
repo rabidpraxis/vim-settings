@@ -62,7 +62,7 @@ nmap <silent> ,fg :TestVisit<CR>
 let g:test#strategy = 'tslime'
 let g:test#preserve_screen = 0
 
-let test#ruby#rspec#executable = 'bundle exec spring rspec'
+" let test#ruby#rspec#executable = 'bundle exec spring rspec'
 let g:test#ruby#rspec#options = {
   \ 'file':    '--format documentation',
   \ 'suite':   '--tag ~slow',
@@ -128,6 +128,7 @@ map ,gi :GoImports<cr>
 Plug 'elixir-editors/vim-elixir'
 
 "Rust
+let g:rust_recommended_style = 0
 Plug 'rust-lang/rust.vim'
 
 " Git
